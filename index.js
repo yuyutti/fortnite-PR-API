@@ -18,7 +18,7 @@ app.listen(9999);
 async function main(retryCount = 0,url) {
     if (!url) return false;
     const { connect } = await import('puppeteer-real-browser');
-    const { page, browser } = await connect({});
+    const { page, browser } = await connect({ headless: "auto", turnstile: true});
 
     await page.goto(url);
     await sleep(5000);
