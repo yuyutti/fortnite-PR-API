@@ -10,6 +10,7 @@ app.post('/api/user', async (req, res) => {
     const url = req.body.url;
     if (!url) return res.status(404).send('url not found');
     const data = await main(0,url);
+    if (!data) return res.status(404).json({ Error: 'データが正しく取得できませんでした'});
     res.json(data);
 });
 
@@ -19,7 +20,7 @@ async function main(retryCount = 0,url) {
     if (!url) return false;
     const { connect } = await import('puppeteer-real-browser');
     const { page, browser } = await connect({ headless: "auto", turnstile: true});
-
+    console.log('connected Fortnitetracker page')
     await page.goto(url);
     await sleep(5000);
 
@@ -49,14 +50,15 @@ async function main(retryCount = 0,url) {
         await browser.close();
         return data;
     } else {
-        console.log('認証に失敗しました。リトライします。');
-        if (retryCount < 3) {
+        console.log('retry...');
+        if (retryCount < 2) {
             await browser.close();
             await sleep(3000);
-            await main(retryCount + 1);
+            await main(retryCount + 1,url);
         } else {
             await browser.close();
-            return {Error: '認証に失敗しました。'};
+            console.log('retry over 3 times.')
+            return null;
         }
     }
 }
