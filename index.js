@@ -20,9 +20,9 @@ async function main(retryCount = 0,url) {
     if (!url) return false;
     const { connect } = await import('puppeteer-real-browser');
     const { page, browser } = await connect({ headless: true, turnstile: true});
-    console.log('connected Fortnitetracker page')
+    console.log('connected Fortnitetracker page');
     await page.goto(url);
-    await sleep(5000);
+    await sleep(7000);
 
     const html = await page.content();
     const scriptRegex = /const profile = (\{[\s\S]*?"powerRank":\s*(\{[\s\S]*?\})[\s\S]*?\});/m;
@@ -53,7 +53,7 @@ async function main(retryCount = 0,url) {
         console.log('retry...');
         if (retryCount < 2) {
             await browser.close();
-            await sleep(3000);
+            await sleep(5000);
             await main(retryCount + 1,url);
         } else {
             await browser.close();
