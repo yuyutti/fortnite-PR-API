@@ -39,6 +39,8 @@ async function main(retryCount = 0,url) {
         const powerRankData = profileData.powerRank;
         const prSegments = profileData.prSegments;
 
+        const segment = prSegments.find(segment => segment.segment === `season-${season}`);
+
         const data = {
             season: season,
             accountID: powerRankData.accountId,
@@ -49,7 +51,7 @@ async function main(retryCount = 0,url) {
             points: powerRankData.points,
             yearPointsRank: powerRankData.yearPointsRank,
             yearPoints: powerRankData.yearPoints,
-            seasonPoints: prSegments.find(segment => segment.segment === `season-${season}`).points || 0,
+            seasonPoints: segment ? segment.points : 0
         }
         await browser.close();
         return data;
