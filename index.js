@@ -19,7 +19,7 @@ app.listen(9999);
 async function main(retryCount = 0,url) {
     if (!url) return false;
     const { connect } = await import('puppeteer-real-browser');
-    const { page, browser } = await connect({ headless: true, turnstile: true});
+    const { page, browser } = await connect({ headless: false, turnstile: true});
     console.log('connected Fortnitetracker page');
     await page.goto(url);
     await sleep(7000);
@@ -51,7 +51,7 @@ async function main(retryCount = 0,url) {
         return data;
     } else {
         console.log('retry...');
-        if (retryCount < 2) {
+        if (retryCount < 3) {
             await browser.close();
             await sleep(5000);
             await main(retryCount + 1,url);
