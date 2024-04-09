@@ -4,6 +4,10 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+process.on('uncaughtException', function(err) {
+    console.log(err);
+});
+
 const sleep = ms => new Promise(res => setTimeout(res, ms));
 
 app.post('/api/user', async (req, res) => {
