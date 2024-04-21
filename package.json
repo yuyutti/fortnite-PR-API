@@ -2,6 +2,7 @@
   "dependencies": {
     "express": "^4.19.2",
     "puppeteer": "^22.6.3",
-    "puppeteer-real-browser": "^1.2.11"
+    "puppeteer-real-browser": "^1.2.11",
+    "queue": "^7.0.0"
   }
 }
