@@ -4,67 +4,56 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-process.on('uncaughtException', function(err) {
-    console.log(err);
-});
-
-const sleep = ms => new Promise(res => setTimeout(res, ms));
+let browser, page;
 
 app.post('/api/user', async (req, res) => {
+    console.log(`Request received: ${req.body.url}`);
     const url = req.body.url;
-    if (!url) return res.status(404).send('url not found');
-    const data = await main(0,url);
-    if (!data) return res.status(404).json({ Error: 'データが正しく取得できませんでした'});
+    if (!url) return res.status(404).send('URL not found');
+
+    const data = await main(url);
+    console.log(data);
+    if (!data) return res.status(500).json({ error: 'Failed to fetch data' });
+
     res.json(data);
 });
 
-app.listen(9999);
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-async function main(retryCount = 0,url) {
-    if (!url) return false;
+async function setupBrowser() {
     const { connect } = await import('puppeteer-real-browser');
-    const { page, browser } = await connect({ headless: false, turnstile: true});
-    console.log('connected Fortnitetracker page');
-    await page.goto(url);
-    await sleep(7000);
+    const connection = await connect({ headless: false, turnstile: true });
+    browser = connection.browser;
+}
 
-    const html = await page.content();
-    const scriptRegex = /const profile = (\{[\s\S]*?"powerRank":\s*(\{[\s\S]*?\})[\s\S]*?\});/m;
-    const match = scriptRegex.exec(html);
-    
-    if (match && match[1]) {
-        const profileData = JSON.parse(match[1]);
+async function main(url) {
+    try {
+        page = await browser.newPage();
+        console.log(url)
+        await page.goto(url);
+        await sleep(7000);
+
+        const html = await page.content();
+        const scriptRegex = /const profile = (\{[\s\S]*?"powerRank":\s*(\{[\s\S]*?\})[\s\S]*?\});/m;
+        const match = scriptRegex.exec(html);
         
-        const season = profileData.currentSeason;
-        const powerRankData = profileData.powerRank;
-        const prSegments = profileData.prSegments;
-
-        const segment = prSegments.find(segment => segment.segment === `season-${season}`);
-
-        const data = {
-            season: season,
-            accountID: powerRankData.accountId,
-            region: powerRankData.region,
-            name: powerRankData.name,
-            platform: powerRankData.platform,
-            powerRank: powerRankData.statRank,
-            points: powerRankData.points,
-            yearPointsRank: powerRankData.yearPointsRank,
-            yearPoints: powerRankData.yearPoints,
-            seasonPoints: segment ? segment.points : 0
-        }
-        await browser.close();
-        return data;
-    } else {
-        console.log('retry...');
-        if (retryCount < 3) {
-            await browser.close();
-            await sleep(5000);
-            await main(retryCount + 1,url);
+        if (match && match[1]) {
+            return JSON.parse(match[1]);
         } else {
-            await browser.close();
-            console.log('retry over 3 times.')
+            console.error('Profile data not found');
             return null;
         }
+    } catch (error) {
+        console.error('Error in fetching or processing page:', error);
+        return null;
+    } finally {
+        await page.close();
     }
 }
+
+(async () => {
+    await setupBrowser();
+    app.listen(9999, () => console.log('Server running on port 9999'));
+})();
