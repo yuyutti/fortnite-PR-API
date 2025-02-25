@@ -73,7 +73,7 @@ async function processEpicId(epicId, retryCount = 3) { // retryCount は最大�
 
         const url2 = `https://fortnitetracker.com/profile/search?q=${epicId}`;
         await page2.goto(url2, { waitUntil: 'domcontentloaded' });
-        await sleep(5000);
+        await sleep(8000);
 
         const html2 = await page2.content();
 
