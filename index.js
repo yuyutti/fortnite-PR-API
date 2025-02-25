@@ -102,6 +102,7 @@ async function processEpicId(epicId, retryCount = 3) { // retryCount は最大�
         }
     } catch (error) {
         console.error(`Error processing Epic ID ${epicId}:`, error);
+        if (page2) await page2.close();
 
         if (retryCount > 0) {
             console.log(`Retrying ${epicId}... (${3 - retryCount} attempts remaining)`);
