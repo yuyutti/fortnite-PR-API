@@ -73,7 +73,7 @@ async function processEpicId(epicId, retryCount = 3) { // retryCount は最大�
 
         const url2 = `https://fortnitetracker.com/profile/search?q=${epicId}`;
         await page2.goto(url2, { waitUntil: 'domcontentloaded' });
-        await sleep(8000);
+        await sleep(12000);
 
         const html2 = await page2.content();
 
@@ -84,7 +84,7 @@ async function processEpicId(epicId, retryCount = 3) { // retryCount は最大�
         } else {
             await page2.goto(url1, { waitUntil: 'domcontentloaded' });
 
-            await sleep(5000);
+            await sleep(12000);
             const html3 = await page2.content();
 
             if (!html3.includes('404 Not Found.')) {
@@ -102,7 +102,6 @@ async function processEpicId(epicId, retryCount = 3) { // retryCount は最大�
         }
     } catch (error) {
         console.error(`Error processing Epic ID ${epicId}:`, error);
-        if (page2) await page2.close();
 
         if (retryCount > 0) {
             console.log(`Retrying ${epicId}... (${3 - retryCount} attempts remaining)`);
