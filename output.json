@@ -1,0 +1,1965 @@
+{
+    "powerRanking": {
+        "accountId": "4118f5eb-c387-40ae-b7d9-2af3ae92c5ef",
+        "region": "ASIA",
+        "platform": "PC",
+        "statRank": 762,
+        "points": 11567,
+        "pr": 11567.78,
+        "prRank": 762,
+        "lifetimePRRank": 2320,
+        "yearlyPr": 3117,
+        "yearlyPRRank": 645,
+        "events": 206,
+        "lastUpdated": "2025-02-24T14:37:03.663668+00:00"
+    },
+    "currentSeason": 34,
+    "eventRegion": "ASIA",
+    "eventPlatform": "PC",
+    "seasonsPR": {
+        "S33": {
+            "point": 4690.700000000001,
+            "events": [
+                {
+                    "windowId": "S33_SoloCashCup_Event8Round1_ASIA_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 8 Round 1",
+                    "eventTitle": "Solo Cash Cup",
+                    "eventName": "S33_SoloCashCup_Event8Round1_ASIA",
+                    "point": 28,
+                    "eventRank": 866,
+                    "eventDate": "2025-02-17T15:00:00Z"
+                },
+                {
+                    "windowId": "S33_SoloCashCup_Event6Round1_ASIA_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 6 Round 1",
+                    "eventTitle": "Solo Cash Cup",
+                    "eventName": "S33_SoloCashCup_Event6Round1_ASIA",
+                    "point": 37.9,
+                    "eventRank": 702,
+                    "eventDate": "2025-02-14T15:00:00Z"
+                },
+                {
+                    "windowId": "S33_SoloCashCup_Event7Round1_ASIA_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 7 Round 1",
+                    "eventTitle": "Solo Cash Cup",
+                    "eventName": "S33_SoloCashCup_Event7Round1_ASIA",
+                    "point": 11.6,
+                    "eventRank": 4195,
+                    "eventDate": "2025-02-05T14:00:00Z"
+                },
+                {
+                    "windowId": "S33_SoloCashCup_Event5Round1_ASIA_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 5 Round 1",
+                    "eventTitle": "Solo Cash Cup",
+                    "eventName": "S33_SoloCashCup_Event5Round1_ASIA",
+                    "point": 36.9,
+                    "eventRank": 719,
+                    "eventDate": "2025-01-24T14:00:00Z"
+                },
+                {
+                    "windowId": "S33_SoloCashCup_Event4Round1_ASIA_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 4 Round 1",
+                    "eventTitle": "Solo Cash Cup",
+                    "eventName": "S33_SoloCashCup_Event4Round1_ASIA",
+                    "point": 40.9,
+                    "eventRank": 652,
+                    "eventDate": "2025-01-17T14:00:00Z"
+                },
+                {
+                    "windowId": "S33_SoloCashCup_Event3Round1_ASIA_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 3 Round 1",
+                    "eventTitle": "Solo Cash Cup",
+                    "eventName": "S33_SoloCashCup_Event3Round1_ASIA",
+                    "point": 12.6,
+                    "eventRank": 3727,
+                    "eventDate": "2025-01-10T15:00:00Z"
+                },
+                {
+                    "windowId": "S33_SoloCashCup_Event2Round1_ASIA_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 2 Round 1",
+                    "eventTitle": "Solo Cash Cup",
+                    "eventName": "S33_SoloCashCup_Event2Round1_ASIA",
+                    "point": 16.5,
+                    "eventRank": 2038,
+                    "eventDate": "2024-12-20T14:00:00Z"
+                },
+                {
+                    "windowId": "S33_SoloCashCup_Event1Round1_ASIA_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 1 Round 1",
+                    "eventTitle": "Solo Cash Cup",
+                    "eventName": "S33_SoloCashCup_Event1Round1_ASIA",
+                    "point": 49.5,
+                    "eventRank": 508,
+                    "eventDate": "2024-12-15T09:00:00Z"
+                },
+                {
+                    "windowId": "S33_SoloCashCup_Event1Round2_ASIA_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 1 Round 2",
+                    "eventTitle": "Solo Cash Cup",
+                    "eventName": "S33_SoloCashCup_Event1Round2_ASIA",
+                    "point": 238.5,
+                    "eventRank": 324,
+                    "eventDate": "2024-12-15T13:00:00Z"
+                },
+                {
+                    "windowId": "S33_FNCSMajor1_LastChanceQualifier_ASIA_2a652287-f4a1-4ed7-ba56-e9c886a84741",
+                    "sessionName": " Session 1",
+                    "eventTitle": "FNCS Major 1 Last Chance Qualifier",
+                    "eventName": "S33_FNCSMajor1_LastChanceQualifier_ASIA",
+                    "point": 642,
+                    "eventRank": 122,
+                    "eventDate": "2025-02-12T15:00:00Z"
+                },
+                {
+                    "windowId": "epicgames_S33_FNCSMajor1_PlayInStage_ASIA_cumulative_ff44d449-d3ca-4b80-81cc-34af5cd69c9d",
+                    "sessionName": "Cumulative Leaderboard",
+                    "eventTitle": "FNCS Major 1 Play-In Cumulative",
+                    "eventName": "epicgames_S33_FNCSMajor1_PlayInStage_ASIA_cumulative",
+                    "point": 376,
+                    "eventRank": 174,
+                    "eventDate": "2025-01-29T14:00:00Z"
+                },
+                {
+                    "windowId": "S33_FNCSDivisionalCup_Division1_Week1Day2_ASIA_ff44d449-d3ca-4b80-81cc-34af5cd69c9d",
+                    "sessionName": " Session 2",
+                    "eventTitle": "FNCS Divisionals Week 1 Day 2",
+                    "eventName": "S33_FNCSDivisionalCup_Division1_Week1Day2_ASIA",
+                    "point": 292.5,
+                    "eventRank": 160,
+                    "eventDate": "2024-12-12T14:00:00Z"
+                },
+                {
+                    "windowId": "S33_FNCSDivisionalCup_Division1_Week1Day1_ASIA_ff44d449-d3ca-4b80-81cc-34af5cd69c9d",
+                    "sessionName": " Session 1",
+                    "eventTitle": "FNCS Divisionals Week 1 Day 1",
+                    "eventName": "S33_FNCSDivisionalCup_Division1_Week1Day1_ASIA",
+                    "point": 280.5,
+                    "eventRank": 176,
+                    "eventDate": "2024-12-11T14:00:00Z"
+                },
+                {
+                    "windowId": "S33_FNCSDivisionalCup_Division1_Week2Day2_ASIA_ff44d449-d3ca-4b80-81cc-34af5cd69c9d",
+                    "sessionName": " Session 5",
+                    "eventTitle": "FNCS Divisionals Week 2 Day 2",
+                    "eventName": "S33_FNCSDivisionalCup_Division1_Week2Day2_ASIA",
+                    "point": 298.5,
+                    "eventRank": 152,
+                    "eventDate": "2024-12-19T14:00:00Z"
+                },
+                {
+                    "windowId": "S33_FNCSDivisionalCup_Division1_Week2Day1_ASIA_ff44d449-d3ca-4b80-81cc-34af5cd69c9d",
+                    "sessionName": " Session 4",
+                    "eventTitle": "FNCS Divisionals Week 2 Day 1",
+                    "eventName": "S33_FNCSDivisionalCup_Division1_Week2Day1_ASIA",
+                    "point": 285,
+                    "eventRank": 170,
+                    "eventDate": "2024-12-17T14:00:00Z"
+                },
+                {
+                    "windowId": "S33_FNCSDivisionalCup_Division1_Week3Day2_ASIA_ff44d449-d3ca-4b80-81cc-34af5cd69c9d",
+                    "sessionName": " Session 8",
+                    "eventTitle": "FNCS Divisionals Week 3 Day 2",
+                    "eventName": "S33_FNCSDivisionalCup_Division1_Week3Day2_ASIA",
+                    "point": 329.2,
+                    "eventRank": 111,
+                    "eventDate": "2025-01-09T15:00:00Z"
+                },
+                {
+                    "windowId": "S33_FNCSDivisionalCup_Division1_Week3Day1_ASIA_ff44d449-d3ca-4b80-81cc-34af5cd69c9d",
+                    "sessionName": " Session 7",
+                    "eventTitle": "FNCS Divisionals Week 3 Day 1",
+                    "eventName": "S33_FNCSDivisionalCup_Division1_Week3Day1_ASIA",
+                    "point": 288.8,
+                    "eventRank": 165,
+                    "eventDate": "2025-01-08T15:00:00Z"
+                },
+                {
+                    "windowId": "S33_FNCSDivisionalCup_Division1_Week4Day2_ASIA_ff44d449-d3ca-4b80-81cc-34af5cd69c9d",
+                    "sessionName": " Session 11",
+                    "eventTitle": "FNCS Divisionals Week 4 Day 2",
+                    "eventName": "S33_FNCSDivisionalCup_Division1_Week4Day2_ASIA",
+                    "point": 324.8,
+                    "eventRank": 117,
+                    "eventDate": "2025-01-16T15:00:00Z"
+                },
+                {
+                    "windowId": "S33_FNCSDivisionalCup_Division1_Week4Day1_ASIA_ff44d449-d3ca-4b80-81cc-34af5cd69c9d",
+                    "sessionName": " Session 10",
+                    "eventTitle": "FNCS Divisionals Week 4 Day 1",
+                    "eventName": "S33_FNCSDivisionalCup_Division1_Week4Day1_ASIA",
+                    "point": 334.5,
+                    "eventRank": 104,
+                    "eventDate": "2025-01-15T15:00:00Z"
+                },
+                {
+                    "windowId": "S33_FNCSDivisionalCup_Division1_Week5Day2_ASIA_ff44d449-d3ca-4b80-81cc-34af5cd69c9d",
+                    "sessionName": " Session 14",
+                    "eventTitle": "FNCS Divisionals Week 5 Day 2",
+                    "eventName": "S33_FNCSDivisionalCup_Division1_Week5Day2_ASIA",
+                    "point": 328.5,
+                    "eventRank": 112,
+                    "eventDate": "2025-01-23T14:00:00Z"
+                },
+                {
+                    "windowId": "S33_FNCSDivisionalCup_Division1_Week5Day1_ASIA_ff44d449-d3ca-4b80-81cc-34af5cd69c9d",
+                    "sessionName": " Session 13",
+                    "eventTitle": "FNCS Divisionals Week 5 Day 1",
+                    "eventName": "S33_FNCSDivisionalCup_Division1_Week5Day1_ASIA",
+                    "point": 326.2,
+                    "eventRank": 115,
+                    "eventDate": "2025-01-22T14:00:00Z"
+                },
+                {
+                    "windowId": "S33_FNCS_Trial_ASIA_ff44d449-d3ca-4b80-81cc-34af5cd69c9d",
+                    "sessionName": " Session 1",
+                    "eventTitle": "FNCS Trial",
+                    "eventName": "S33_FNCS_Trial_ASIA",
+                    "point": 111.8,
+                    "eventRank": 103,
+                    "eventDate": "2024-12-07T14:00:00Z"
+                }
+            ]
+        },
+        "S32": {
+            "point": 871.6000000000001,
+            "events": [
+                {
+                    "windowId": "S32_SoloVictoryCashCup_Event4Round1_ASIA_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 4 Round 1",
+                    "eventTitle": "Solo Victory Cup",
+                    "eventName": "S32_SoloVictoryCashCup_Event4Round1_ASIA",
+                    "point": 7.7,
+                    "eventRank": 2377,
+                    "eventDate": "2024-11-25T15:00:00Z"
+                },
+                {
+                    "windowId": "S32_SoloVictoryCashCup_Event3Round1_ASIA_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 3 Round 1",
+                    "eventTitle": "Solo Victory Cup",
+                    "eventName": "S32_SoloVictoryCashCup_Event3Round1_ASIA",
+                    "point": 12.8,
+                    "eventRank": 906,
+                    "eventDate": "2024-11-22T15:00:00Z"
+                },
+                {
+                    "windowId": "S32_SoloVictoryCashCup_Event2Round1_ASIA_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 2 Round 1",
+                    "eventTitle": "Solo Victory Cup",
+                    "eventName": "S32_SoloVictoryCashCup_Event2Round1_ASIA",
+                    "point": 59.5,
+                    "eventRank": 325,
+                    "eventDate": "2024-11-15T15:00:00Z"
+                },
+                {
+                    "windowId": "S32_SoloVictoryCashCup_Event1Round1_ASIA_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 1 Round 1",
+                    "eventTitle": "Solo Victory Cup",
+                    "eventName": "S32_SoloVictoryCashCup_Event1Round1_ASIA",
+                    "point": 8.2,
+                    "eventRank": 2067,
+                    "eventDate": "2024-11-08T15:00:00Z"
+                },
+                {
+                    "windowId": "S32_TriosCashCup_Event6Round1_ASIA_ff44d449-d3ca-4b80-81cc-34af5cd69c9d",
+                    "sessionName": " Session 6 Round 1",
+                    "eventTitle": "Trios Cash Cup",
+                    "eventName": "S32_TriosCashCup_Event6Round1_ASIA",
+                    "point": 179,
+                    "eventRank": 192,
+                    "eventDate": "2024-11-23T11:00:00Z"
+                },
+                {
+                    "windowId": "S32_TriosCashCup_Event5Round1_ASIA_ff44d449-d3ca-4b80-81cc-34af5cd69c9d",
+                    "sessionName": " Session 5 Round 1",
+                    "eventTitle": "Trios Cash Cup",
+                    "eventName": "S32_TriosCashCup_Event5Round1_ASIA",
+                    "point": 295,
+                    "eventRank": 72,
+                    "eventDate": "2024-11-20T15:00:00Z"
+                },
+                {
+                    "windowId": "S32_TriosCashCup_Event4Round1_ASIA_ff44d449-d3ca-4b80-81cc-34af5cd69c9d",
+                    "sessionName": " Session 4 Round 1",
+                    "eventTitle": "Trios Cash Cup",
+                    "eventName": "S32_TriosCashCup_Event4Round1_ASIA",
+                    "point": 61.5,
+                    "eventRank": 477,
+                    "eventDate": "2024-11-16T11:00:00Z"
+                },
+                {
+                    "windowId": "S32_TriosCashCup_Event3Round1_ASIA_ff44d449-d3ca-4b80-81cc-34af5cd69c9d",
+                    "sessionName": " Session 3 Round 1",
+                    "eventTitle": "Trios Cash Cup",
+                    "eventName": "S32_TriosCashCup_Event3Round1_ASIA",
+                    "point": 47.8,
+                    "eventRank": 537,
+                    "eventDate": "2024-11-13T15:00:00Z"
+                },
+                {
+                    "windowId": "S32_TriosCashCup_Event2Round1_ASIA_ff44d449-d3ca-4b80-81cc-34af5cd69c9d",
+                    "sessionName": " Session 2 Round 1",
+                    "eventTitle": "Trios Cash Cup",
+                    "eventName": "S32_TriosCashCup_Event2Round1_ASIA",
+                    "point": 49.2,
+                    "eventRank": 514,
+                    "eventDate": "2024-11-09T11:00:00Z"
+                },
+                {
+                    "windowId": "S32_TriosCashCup_Event1Round1_ASIA_ff44d449-d3ca-4b80-81cc-34af5cd69c9d",
+                    "sessionName": " Session 1 Round 1",
+                    "eventTitle": "Trios Cash Cup",
+                    "eventName": "S32_TriosCashCup_Event1Round1_ASIA",
+                    "point": 33.2,
+                    "eventRank": 780,
+                    "eventDate": "2024-11-07T15:00:00Z"
+                },
+                {
+                    "windowId": "S32_SquadsReloadCup_Event1_ASIA_4d2d661f-abeb-47ba-835d-b046719e9059",
+                    "sessionName": " Session 1",
+                    "eventTitle": "Reload Squads Cash Cup",
+                    "eventName": "S32_SquadsReloadCup_Event1_ASIA",
+                    "point": 49.2,
+                    "eventRank": 514,
+                    "eventDate": "2024-11-10T13:00:00Z"
+                },
+                {
+                    "windowId": "S32_PlatformReloadDuosCashCupPC_Event1_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Session 1",
+                    "eventTitle": "Reload Duos Cash Cup (PC)",
+                    "eventName": "S32_PlatformReloadDuosCashCupPC_Event1_ASIA",
+                    "point": 68.5,
+                    "eventRank": 463,
+                    "eventDate": "2024-11-09T15:00:00Z"
+                }
+            ]
+        },
+        "S31": {
+            "point": 2108.9999999999995,
+            "events": [
+                {
+                    "windowId": "S31_PlatformReloadDuosCashCupPC_Event8_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Session 8",
+                    "eventTitle": "Reload Duos Cash Cup (PC)",
+                    "eventName": "S31_PlatformReloadDuosCashCupPC_Event8_ASIA",
+                    "point": 37.1,
+                    "eventRank": 715,
+                    "eventDate": "2024-10-29T14:00:00Z"
+                },
+                {
+                    "windowId": "S31_PlatformReloadDuosCashCupPC_Event7_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Session 7",
+                    "eventTitle": "Reload Duos Cash Cup (PC)",
+                    "eventName": "S31_PlatformReloadDuosCashCupPC_Event7_ASIA",
+                    "point": 77.5,
+                    "eventRank": 445,
+                    "eventDate": "2024-10-18T14:00:00Z"
+                },
+                {
+                    "windowId": "S31_PlatformReloadDuosCashCupPC_Event6_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Session 6",
+                    "eventTitle": "Reload Duos Cash Cup (PC)",
+                    "eventName": "S31_PlatformReloadDuosCashCupPC_Event6_ASIA",
+                    "point": 198,
+                    "eventRank": 154,
+                    "eventDate": "2024-10-13T12:00:00Z"
+                },
+                {
+                    "windowId": "S31_TriosCashCup_Event4Round1_ASIA_ff44d449-d3ca-4b80-81cc-34af5cd69c9d",
+                    "sessionName": " Session 4 Round 1",
+                    "eventTitle": "Trios Cash Cup",
+                    "eventName": "S31_TriosCashCup_Event4Round1_ASIA",
+                    "point": 188.5,
+                    "eventRank": 173,
+                    "eventDate": "2024-10-26T10:00:00Z"
+                },
+                {
+                    "windowId": "S31_TriosCashCup_Event4Round2_ASIA_ff44d449-d3ca-4b80-81cc-34af5cd69c9d",
+                    "sessionName": " Session 4 Round 2",
+                    "eventTitle": "Trios Cash Cup",
+                    "eventName": "S31_TriosCashCup_Event4Round2_ASIA",
+                    "point": 515,
+                    "eventRank": 87,
+                    "eventDate": "2024-10-26T14:00:00Z"
+                },
+                {
+                    "windowId": "S31_TriosCashCup_Event3Round1_ASIA_d52b7257-0fed-46b8-86be-87bf96ef097f",
+                    "sessionName": " Session 3 Round 1",
+                    "eventTitle": "Trios Cash Cup",
+                    "eventName": "S31_TriosCashCup_Event3Round1_ASIA",
+                    "point": 75.5,
+                    "eventRank": 449,
+                    "eventDate": "2024-10-18T16:30:00Z"
+                },
+                {
+                    "windowId": "S31_TriosCashCup_Event2Round1_ASIA_877aa098-8cb9-49c7-83fd-37ca8b6aab7f",
+                    "sessionName": " Session 2 Round 1",
+                    "eventTitle": "Trios Cash Cup",
+                    "eventName": "S31_TriosCashCup_Event2Round1_ASIA",
+                    "point": 41.5,
+                    "eventRank": 642,
+                    "eventDate": "2024-10-13T08:00:00Z"
+                },
+                {
+                    "windowId": "S31_TriosCashCup_Event1Round1_ASIA_877aa098-8cb9-49c7-83fd-37ca8b6aab7f",
+                    "sessionName": " Session 1 Round 1",
+                    "eventTitle": "Trios Cash Cup",
+                    "eventName": "S31_TriosCashCup_Event1Round1_ASIA",
+                    "point": 18.4,
+                    "eventRank": 1476,
+                    "eventDate": "2024-10-04T16:30:00Z"
+                },
+                {
+                    "windowId": "S31_DuosCashCup_Event8Round1_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Session 8 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S31_DuosCashCup_Event8Round1_ASIA",
+                    "point": 113,
+                    "eventRank": 350,
+                    "eventDate": "2024-10-23T14:00:00Z"
+                },
+                {
+                    "windowId": "S31_DuosCashCup_Event7Round1_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Session 7 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S31_DuosCashCup_Event7Round1_ASIA",
+                    "point": 22.9,
+                    "eventRank": 951,
+                    "eventDate": "2024-10-16T14:00:00Z"
+                },
+                {
+                    "windowId": "S31_DuosCashCup_Event6Round1_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Session 6 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S31_DuosCashCup_Event6Round1_ASIA",
+                    "point": 200.5,
+                    "eventRank": 149,
+                    "eventDate": "2024-10-09T14:00:00Z"
+                },
+                {
+                    "windowId": "S31_DuosCashCup_Event5Round1_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Session 5 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S31_DuosCashCup_Event5Round1_ASIA",
+                    "point": 30.6,
+                    "eventRank": 824,
+                    "eventDate": "2024-10-02T14:00:00Z"
+                },
+                {
+                    "windowId": "S31_DuosCashCup_Event4Round1_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Session 4 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S31_DuosCashCup_Event4Round1_ASIA",
+                    "point": 18.4,
+                    "eventRank": 1469,
+                    "eventDate": "2024-09-25T14:00:00Z"
+                },
+                {
+                    "windowId": "S31_DuosCashCup_Event3Round1_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Session 3 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S31_DuosCashCup_Event3Round1_ASIA",
+                    "point": 125.5,
+                    "eventRank": 299,
+                    "eventDate": "2024-09-18T14:00:00Z"
+                },
+                {
+                    "windowId": "S31_DuosCashCup_Event2Round1_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Session 2 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S31_DuosCashCup_Event2Round1_ASIA",
+                    "point": 28.6,
+                    "eventRank": 856,
+                    "eventDate": "2024-09-11T14:00:00Z"
+                },
+                {
+                    "windowId": "S31_DuosCashCup_Event1Round1_ASIA_78dcc5a0-3d02-47dd-9266-5cb4b232b274",
+                    "sessionName": " Session 1 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S31_DuosCashCup_Event1Round1_ASIA",
+                    "point": 119.2,
+                    "eventRank": 324,
+                    "eventDate": "2024-08-28T14:00:00Z"
+                },
+                {
+                    "windowId": "S31_SquadsReloadCup_Event3_ASIA_3f64c155-63fb-4c51-872c-2e1addd6164f",
+                    "sessionName": " Session 3",
+                    "eventTitle": "Reload Squads Cash Cup",
+                    "eventName": "S31_SquadsReloadCup_Event3_ASIA",
+                    "point": 84,
+                    "eventRank": 432,
+                    "eventDate": "2024-10-19T14:00:00Z"
+                },
+                {
+                    "windowId": "S31_SquadsReloadCup_Event2_ASIA_d8fb3b00-d324-44f4-9876-ad7d4c35251f",
+                    "sessionName": " Session 2",
+                    "eventTitle": "Reload Squads Cash Cup",
+                    "eventName": "S31_SquadsReloadCup_Event2_ASIA",
+                    "point": 19.8,
+                    "eventRank": 1058,
+                    "eventDate": "2024-10-13T16:00:00Z"
+                },
+                {
+                    "windowId": "S31_SquadsReloadCup_Event1_ASIA_d8fb3b00-d324-44f4-9876-ad7d4c35251f",
+                    "sessionName": " Session 1",
+                    "eventTitle": "Reload Squads Cash Cup",
+                    "eventName": "S31_SquadsReloadCup_Event1_ASIA",
+                    "point": 20.1,
+                    "eventRank": 999,
+                    "eventDate": "2024-10-05T14:00:00Z"
+                },
+                {
+                    "windowId": "S31_SoloVictoryCashCup_Event7Round1_ASIA_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 7 Round 1",
+                    "eventTitle": "Solo Victory Cup",
+                    "eventName": "S31_SoloVictoryCashCup_Event7Round1_ASIA",
+                    "point": 6.6,
+                    "eventRank": 3452,
+                    "eventDate": "2024-10-14T14:00:00Z"
+                },
+                {
+                    "windowId": "S31_SoloVictoryCashCup_Event6Round1_ASIA_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 6 Round 1",
+                    "eventTitle": "Solo Victory Cup",
+                    "eventName": "S31_SoloVictoryCashCup_Event6Round1_ASIA",
+                    "point": 15.3,
+                    "eventRank": 824,
+                    "eventDate": "2024-10-07T14:00:00Z"
+                },
+                {
+                    "windowId": "S31_SquadsReloadVictoryCashCup_Event4Round1_ASIA_a7aed632-375d-429c-bf76-4f4e125dffae",
+                    "sessionName": " Session 4 Round 1",
+                    "eventTitle": "Reload Squads Victory Cup",
+                    "eventName": "S31_SquadsReloadVictoryCashCup_Event4Round1_ASIA",
+                    "point": 20.8,
+                    "eventRank": 641,
+                    "eventDate": "2024-09-28T14:00:00Z"
+                },
+                {
+                    "windowId": "S31_SquadsReloadVictoryCashCup_Event3Round1_ASIA_a7aed632-375d-429c-bf76-4f4e125dffae",
+                    "sessionName": " Session 3 Round 1",
+                    "eventTitle": "Reload Squads Victory Cup",
+                    "eventName": "S31_SquadsReloadVictoryCashCup_Event3Round1_ASIA",
+                    "point": 34.5,
+                    "eventRank": 462,
+                    "eventDate": "2024-09-22T14:00:00Z"
+                },
+                {
+                    "windowId": "S31_SquadsReloadVictoryCashCup_Event1Round1_ASIA_a7aed632-375d-429c-bf76-4f4e125dffae",
+                    "sessionName": " Session 1 Round 1",
+                    "eventTitle": "Reload Squads Victory Cup",
+                    "eventName": "S31_SquadsReloadVictoryCashCup_Event1Round1_ASIA",
+                    "point": 73.5,
+                    "eventRank": 256,
+                    "eventDate": "2024-09-01T14:00:00Z"
+                },
+                {
+                    "windowId": "S31_InfluencerCup_Round1_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Round 1",
+                    "eventTitle": "Pols FNCS Cup ",
+                    "eventName": "S31_InfluencerCup_Round1_ASIA",
+                    "point": 24.2,
+                    "eventRank": 527,
+                    "eventDate": "2024-09-06T14:00:00Z"
+                }
+            ]
+        },
+        "S30": {
+            "point": 640.76,
+            "events": [
+                {
+                    "windowId": "S30_SquadsVictoryCashCup_Event4Round1_ASIA_a7aed632-375d-429c-bf76-4f4e125dffae",
+                    "sessionName": " Session 4 Round 1",
+                    "eventTitle": "Squads Victory Cup",
+                    "eventName": "S30_SquadsVictoryCashCup_Event4Round1_ASIA",
+                    "point": 93.5,
+                    "eventRank": 176,
+                    "eventDate": "2024-08-04T14:00:00Z"
+                },
+                {
+                    "windowId": "S30_SquadsVictoryCashCup_Event3Round1_ASIA_8f04d073-56be-4cbf-a4db-3eaf84335d63",
+                    "sessionName": " Session 3 Round 1",
+                    "eventTitle": "Squads Victory Cup",
+                    "eventName": "S30_SquadsVictoryCashCup_Event3Round1_ASIA",
+                    "point": 17.08,
+                    "eventRank": 519,
+                    "eventDate": "2024-06-30T14:00:00Z"
+                },
+                {
+                    "windowId": "S30_SquadsVictoryCashCup_Event2Round1_ASIA_361de505-1482-45f9-838e-5afd13e6fa7b",
+                    "sessionName": " Session 2 Round 1",
+                    "eventTitle": "Squads Victory Cup",
+                    "eventName": "S30_SquadsVictoryCashCup_Event2Round1_ASIA",
+                    "point": 17.009999999999998,
+                    "eventRank": 522,
+                    "eventDate": "2024-06-09T14:00:00Z"
+                },
+                {
+                    "windowId": "S30_SquadsVictoryCashCup_Event1Round1_ASIA_361de505-1482-45f9-838e-5afd13e6fa7b",
+                    "sessionName": " Session 1 Round 1",
+                    "eventTitle": "Squads Victory Cup",
+                    "eventName": "S30_SquadsVictoryCashCup_Event1Round1_ASIA",
+                    "point": 132.29999999999998,
+                    "eventRank": 44,
+                    "eventDate": "2024-06-02T14:00:00Z"
+                },
+                {
+                    "windowId": "S30_FNCS_Major3_Qualifier2Round2_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Round 2",
+                    "eventTitle": "FNCS Major 3 Open Qualifier 2",
+                    "eventName": "S30_FNCS_Major3_Qualifier2Round2_ASIA",
+                    "point": 201.10999999999999,
+                    "eventRank": 342,
+                    "eventDate": "2024-06-22T14:00:00Z"
+                },
+                {
+                    "windowId": "S30_FNCS_Major3_Qualifier2Round1_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Round 1",
+                    "eventTitle": "FNCS Major 3 Open Qualifier 2",
+                    "eventName": "S30_FNCS_Major3_Qualifier2Round1_ASIA",
+                    "point": 43.26,
+                    "eventRank": 818,
+                    "eventDate": "2024-06-21T14:00:00Z"
+                },
+                {
+                    "windowId": "S30_FNCS_Major3_Qualifier1Round2_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Round 2",
+                    "eventTitle": "FNCS Major 3 Open Qualifier 1",
+                    "eventName": "S30_FNCS_Major3_Qualifier1Round2_ASIA",
+                    "point": 73.64,
+                    "eventRank": 632,
+                    "eventDate": "2024-06-15T14:00:00Z"
+                },
+                {
+                    "windowId": "S30_FNCS_Major3_Qualifier1Round1_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Round 1",
+                    "eventTitle": "FNCS Major 3 Open Qualifier 1",
+                    "eventName": "S30_FNCS_Major3_Qualifier1Round1_ASIA",
+                    "point": 62.85999999999999,
+                    "eventRank": 585,
+                    "eventDate": "2024-06-14T14:00:00Z"
+                }
+            ]
+        },
+        "S29": {
+            "point": 2672.3999999999996,
+            "events": [
+                {
+                    "windowId": "S29_FNCS_Major2_LowerSemis_Round2_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Round 2",
+                    "eventTitle": "FNCS Major 2 Semi-Finals Lower",
+                    "eventName": "S29_FNCS_Major2_LowerSemis_Round2_ASIA",
+                    "point": 529.1999999999999,
+                    "eventRank": 172,
+                    "eventDate": "2024-05-11T14:00:00Z"
+                },
+                {
+                    "windowId": "S29_FNCS_Major2_LowerSemis_Round1_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Round 1",
+                    "eventTitle": "FNCS Major 2 Semi-Finals Lower",
+                    "eventName": "S29_FNCS_Major2_LowerSemis_Round1_ASIA",
+                    "point": 558.5999999999999,
+                    "eventRank": 151,
+                    "eventDate": "2024-05-10T14:00:00Z"
+                },
+                {
+                    "windowId": "S29_DuosCashCup_Event4Round1_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Session 4 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S29_DuosCashCup_Event4Round1_ASIA",
+                    "point": 98.35,
+                    "eventRank": 269,
+                    "eventDate": "2024-05-01T14:00:00Z"
+                },
+                {
+                    "windowId": "S29_DuosCashCup_Event3Round1_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Session 3 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S29_DuosCashCup_Event3Round1_ASIA",
+                    "point": 14,
+                    "eventRank": 867,
+                    "eventDate": "2024-04-10T14:00:00Z"
+                },
+                {
+                    "windowId": "S29_DuosCashCup_Event1Round1_makegood_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Session 1 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S29_DuosCashCup_Event1Round1_makegood_ASIA",
+                    "point": 22.1,
+                    "eventRank": 596,
+                    "eventDate": "2024-04-04T14:00:00Z"
+                },
+                {
+                    "windowId": "S29_DuosCashCup_Event2Round1_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Session 2 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S29_DuosCashCup_Event2Round1_ASIA",
+                    "point": 24.5,
+                    "eventRank": 516,
+                    "eventDate": "2024-03-30T10:00:00Z"
+                },
+                {
+                    "windowId": "S29_FNCS_Major2_Qualifier2Round3_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Round 3",
+                    "eventTitle": "FNCS Major 2 Open Qualifier 2",
+                    "eventName": "S29_FNCS_Major2_Qualifier2Round3_ASIA",
+                    "point": 334,
+                    "eventRank": 216,
+                    "eventDate": "2024-04-21T14:00:00Z"
+                },
+                {
+                    "windowId": "S29_FNCS_Major2_Qualifier2Round2_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Round 2",
+                    "eventTitle": "FNCS Major 2 Open Qualifier 2",
+                    "eventName": "S29_FNCS_Major2_Qualifier2Round2_ASIA",
+                    "point": 270,
+                    "eventRank": 118,
+                    "eventDate": "2024-04-20T14:00:00Z"
+                },
+                {
+                    "windowId": "S29_FNCS_Major2_Qualifier2Round1_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Round 1",
+                    "eventTitle": "FNCS Major 2 Open Qualifier 2",
+                    "eventName": "S29_FNCS_Major2_Qualifier2Round1_ASIA",
+                    "point": 23.95,
+                    "eventRank": 934,
+                    "eventDate": "2024-04-19T14:00:00Z"
+                },
+                {
+                    "windowId": "S29_FNCS_Major2_Qualifier1Round3_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Round 3",
+                    "eventTitle": "FNCS Major 2 Open Qualifier 1",
+                    "eventName": "S29_FNCS_Major2_Qualifier1Round3_ASIA",
+                    "point": 391,
+                    "eventRank": 159,
+                    "eventDate": "2024-04-14T14:00:00Z"
+                },
+                {
+                    "windowId": "S29_FNCS_Major2_Qualifier1Round2_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Round 2",
+                    "eventTitle": "FNCS Major 2 Open Qualifier 1",
+                    "eventName": "S29_FNCS_Major2_Qualifier1Round2_ASIA",
+                    "point": 368.75,
+                    "eventRank": 72,
+                    "eventDate": "2024-04-13T14:00:00Z"
+                },
+                {
+                    "windowId": "S29_FNCS_Major2_Qualifier1Round1_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Round 1",
+                    "eventTitle": "FNCS Major 2 Open Qualifier 1",
+                    "eventName": "S29_FNCS_Major2_Qualifier1Round1_ASIA",
+                    "point": 37.95,
+                    "eventRank": 701,
+                    "eventDate": "2024-04-12T14:00:00Z"
+                }
+            ]
+        },
+        "S28": {
+            "point": 293.52,
+            "events": [
+                {
+                    "windowId": "S28_DuosCashCup_Event5Round1_ASIA_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Session 5 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S28_DuosCashCup_Event5Round1_ASIA",
+                    "point": 70.25,
+                    "eventRank": 269,
+                    "eventDate": "2024-02-20T15:00:00Z"
+                },
+                {
+                    "windowId": "S28_DuosCashCup_Event4Round1_ASIA_e2a5b057-0966-41c9-a30f-48d0a80625a9",
+                    "sessionName": " Session 4 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S28_DuosCashCup_Event4Round1_ASIA",
+                    "point": 12.87,
+                    "eventRank": 619,
+                    "eventDate": "2024-01-24T15:00:00Z"
+                },
+                {
+                    "windowId": "S28_DuosCashCup_Event3Round1_ASIA_e2a5b057-0966-41c9-a30f-48d0a80625a9",
+                    "sessionName": " Session 3 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S28_DuosCashCup_Event3Round1_ASIA",
+                    "point": 4.98,
+                    "eventRank": 2011,
+                    "eventDate": "2024-01-20T11:00:00Z"
+                },
+                {
+                    "windowId": "S28_DuosCashCup_Event2Round1_ASIA_e2a5b057-0966-41c9-a30f-48d0a80625a9",
+                    "sessionName": " Session 2 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S28_DuosCashCup_Event2Round1_ASIA",
+                    "point": 20.55,
+                    "eventRank": 463,
+                    "eventDate": "2023-12-17T11:00:00Z"
+                },
+                {
+                    "windowId": "S28_DuosCashCup_Event1Round1_ASIA_e2a5b057-0966-41c9-a30f-48d0a80625a9",
+                    "sessionName": " Session 1 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S28_DuosCashCup_Event1Round1_ASIA",
+                    "point": 5.94,
+                    "eventRank": 1049,
+                    "eventDate": "2023-12-09T11:00:00Z"
+                },
+                {
+                    "windowId": "S28_FNCS_Major1_Qualifier2Round2_ASIA_e2a5b057-0966-41c9-a30f-48d0a80625a9",
+                    "sessionName": " Round 2",
+                    "eventTitle": "FNCS Major 1 Open Qualifier 2",
+                    "eventName": "S28_FNCS_Major1_Qualifier2Round2_ASIA",
+                    "point": 137.05,
+                    "eventRank": 364,
+                    "eventDate": "2024-02-03T15:00:00Z"
+                },
+                {
+                    "windowId": "S28_FNCS_Major1_Qualifier2Round1_ASIA_e2a5b057-0966-41c9-a30f-48d0a80625a9",
+                    "sessionName": " Round 1",
+                    "eventTitle": "FNCS Major 1 Open Qualifier 2",
+                    "eventName": "S28_FNCS_Major1_Qualifier2Round1_ASIA",
+                    "point": 30.6,
+                    "eventRank": 823,
+                    "eventDate": "2024-02-02T15:00:00Z"
+                },
+                {
+                    "windowId": "S28_FNCS_Major1_Qualifier1Round1_ASIA_e2a5b057-0966-41c9-a30f-48d0a80625a9",
+                    "sessionName": " Round 1",
+                    "eventTitle": "FNCS Major 1 Open Qualifier 1",
+                    "eventName": "S28_FNCS_Major1_Qualifier1Round1_ASIA",
+                    "point": 11.28,
+                    "eventRank": 1361,
+                    "eventDate": "2024-01-26T15:00:00Z"
+                }
+            ]
+        },
+        "S27": {
+            "point": 66.78,
+            "events": [
+                {
+                    "windowId": "S27_OGTomoya_ASIA_Event1_76a96776-3ae3-444b-9f64-2cac9bea098b",
+                    "sessionName": " Session 1",
+                    "eventTitle": "Tomoya YT's OG Skirmish ",
+                    "eventName": "S27_OGTomoya_ASIA_Event1",
+                    "point": 36.9,
+                    "eventRank": 436,
+                    "eventDate": "2023-11-23T15:00:00Z"
+                },
+                {
+                    "windowId": "S27_OGTomoya_ASIA_Event3_ed4d4d51-b9a0-43f6-8afd-8577ffc4119f",
+                    "sessionName": " Session 3",
+                    "eventTitle": "Tomoya YT's OG Skirmish ",
+                    "eventName": "S27_OGTomoya_ASIA_Event3",
+                    "point": 8.01,
+                    "eventRank": 1658,
+                    "eventDate": "2023-11-19T15:00:00Z"
+                },
+                {
+                    "windowId": "S27_OGDohyeon_Squads_ASIA_0fbe4a40-cecf-4487-aca7-ae63887ac63d",
+                    "sessionName": " Session 1",
+                    "eventTitle": "Dohyeon's OG Skirmish ",
+                    "eventName": "S27_OGDohyeon_Squads_ASIA",
+                    "point": 21.87,
+                    "eventRank": 523,
+                    "eventDate": "2023-11-05T15:00:00Z"
+                }
+            ]
+        },
+        "S26": {
+            "point": 145.44,
+            "events": [
+                {
+                    "windowId": "S26_DuosCashCup_ASIA_Event8_Round1_e2a5b057-0966-41c9-a30f-48d0a80625a9",
+                    "sessionName": " Session 8 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S26_DuosCashCup_ASIA_Event8_Round1",
+                    "point": 5.58,
+                    "eventRank": 1426,
+                    "eventDate": "2023-11-01T14:00:00Z"
+                },
+                {
+                    "windowId": "S26_DuosCashCup_ASIA_Event7_Round1_e2a5b057-0966-41c9-a30f-48d0a80625a9",
+                    "sessionName": " Session 7 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S26_DuosCashCup_ASIA_Event7_Round1",
+                    "point": 48.449999999999996,
+                    "eventRank": 227,
+                    "eventDate": "2023-10-25T14:00:00Z"
+                },
+                {
+                    "windowId": "S26_DuosCashCup_ASIA_Event6_Round1_e2a5b057-0966-41c9-a30f-48d0a80625a9",
+                    "sessionName": " Session 6 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S26_DuosCashCup_ASIA_Event6_Round1",
+                    "point": 25.65,
+                    "eventRank": 429,
+                    "eventDate": "2023-10-20T14:00:00Z"
+                },
+                {
+                    "windowId": "S26_DuosCashCup_ASIA_Event5_Round1_1a4730a5-d471-417c-b597-eefa415ae630",
+                    "sessionName": " Session 5 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S26_DuosCashCup_ASIA_Event5_Round1",
+                    "point": 12.63,
+                    "eventRank": 631,
+                    "eventDate": "2023-10-06T14:00:00Z"
+                },
+                {
+                    "windowId": "S26_DuosCashCup_ASIA_Event4_Round1_e2a5b057-0966-41c9-a30f-48d0a80625a9",
+                    "sessionName": " Session 4 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S26_DuosCashCup_ASIA_Event4_Round1",
+                    "point": 10.95,
+                    "eventRank": 725,
+                    "eventDate": "2023-09-29T14:00:00Z"
+                },
+                {
+                    "windowId": "S26_DuosCashCup_ASIA_Event3_Round1_e2a5b057-0966-41c9-a30f-48d0a80625a9",
+                    "sessionName": " Session 3 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S26_DuosCashCup_ASIA_Event3_Round1",
+                    "point": 11.069999999999999,
+                    "eventRank": 718,
+                    "eventDate": "2023-09-22T14:00:00Z"
+                },
+                {
+                    "windowId": "S26_DuosCashCup_ASIA_Event2_Round1_e2a5b057-0966-41c9-a30f-48d0a80625a9",
+                    "sessionName": " Session 2 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S26_DuosCashCup_ASIA_Event2_Round1",
+                    "point": 12.06,
+                    "eventRank": 664,
+                    "eventDate": "2023-09-14T14:00:00Z"
+                },
+                {
+                    "windowId": "S26_DuosCashCup_ASIA_Event1_Round1_e2a5b057-0966-41c9-a30f-48d0a80625a9",
+                    "sessionName": " Session 1 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S26_DuosCashCup_ASIA_Event1_Round1",
+                    "point": 19.05,
+                    "eventRank": 473,
+                    "eventDate": "2023-09-07T14:00:00Z"
+                }
+            ]
+        },
+        "S25": {
+            "point": 77.58,
+            "events": [
+                {
+                    "windowId": "S25_DuosCashCup_ASIA_Event8_Round1_634556ef-99da-4278-aa01-5ae42080da7b",
+                    "sessionName": " Session 8 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S25_DuosCashCup_ASIA_Event8_Round1",
+                    "point": 5.159999999999999,
+                    "eventRank": 1850,
+                    "eventDate": "2023-08-21T14:00:00Z"
+                },
+                {
+                    "windowId": "S25_DuosCashCup_ASIA_Event7_Round1_ed4d4d51-b9a0-43f6-8afd-8577ffc4119f",
+                    "sessionName": " Session 7 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S25_DuosCashCup_ASIA_Event7_Round1",
+                    "point": 31.08,
+                    "eventRank": 389,
+                    "eventDate": "2023-08-16T14:00:00Z"
+                },
+                {
+                    "windowId": "S25_DuosCashCup_ASIA_Event6_Round1_634556ef-99da-4278-aa01-5ae42080da7b",
+                    "sessionName": " Session 6 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S25_DuosCashCup_ASIA_Event6_Round1",
+                    "point": 13.17,
+                    "eventRank": 601,
+                    "eventDate": "2023-08-09T14:00:00Z"
+                },
+                {
+                    "windowId": "S25_DuosCashCup_ASIA_Event5_Round1_634556ef-99da-4278-aa01-5ae42080da7b",
+                    "sessionName": " Session 5 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S25_DuosCashCup_ASIA_Event5_Round1",
+                    "point": 0,
+                    "eventRank": 1095,
+                    "eventDate": "2023-07-31T14:00:00Z"
+                },
+                {
+                    "windowId": "S25_DuosCashCup_ASIA_Event4_Round1_634556ef-99da-4278-aa01-5ae42080da7b",
+                    "sessionName": " Session 4 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S25_DuosCashCup_ASIA_Event4_Round1",
+                    "point": 0,
+                    "eventRank": 340,
+                    "eventDate": "2023-07-24T14:00:00Z"
+                },
+                {
+                    "windowId": "S25_DuosCashCup_ASIA_Event3_Round1_634556ef-99da-4278-aa01-5ae42080da7b",
+                    "sessionName": " Session 3 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S25_DuosCashCup_ASIA_Event3_Round1",
+                    "point": 0,
+                    "eventRank": 790,
+                    "eventDate": "2023-07-17T14:00:00Z"
+                },
+                {
+                    "windowId": "S25_DuosCashCup_ASIA_Event2_Round1_ed4d4d51-b9a0-43f6-8afd-8577ffc4119f",
+                    "sessionName": " Session 2 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S25_DuosCashCup_ASIA_Event2_Round1",
+                    "point": 0,
+                    "eventRank": 668,
+                    "eventDate": "2023-06-28T14:00:00Z"
+                },
+                {
+                    "windowId": "S25_DuosCashCup_ASIA_Event1_Round1_ed4d4d51-b9a0-43f6-8afd-8577ffc4119f",
+                    "sessionName": " Session 1 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S25_DuosCashCup_ASIA_Event1_Round1",
+                    "point": 0,
+                    "eventRank": 473,
+                    "eventDate": "2023-06-23T14:00:00Z"
+                },
+                {
+                    "windowId": "S25_FNCS_LastChanceMajor_ASIA_Day1_634556ef-99da-4278-aa01-5ae42080da7b",
+                    "sessionName": "Day 1 Session 1",
+                    "eventTitle": "FNCS Last Chance Major",
+                    "eventName": "S25_FNCS_LastChanceMajor_ASIA_Day1",
+                    "point": 11.67,
+                    "eventRank": 1159,
+                    "eventDate": "2023-08-18T14:00:00Z"
+                },
+                {
+                    "windowId": "S25_FNCS_Major3_Week3_ASIA_Day1_634556ef-99da-4278-aa01-5ae42080da7b",
+                    "sessionName": "Day 1 Session 1",
+                    "eventTitle": "FNCS Major 3 WEEK 3",
+                    "eventName": "S25_FNCS_Major3_Week3_ASIA_Day1",
+                    "point": 16.5,
+                    "eventRank": 875,
+                    "eventDate": "2023-08-03T14:00:00Z"
+                },
+                {
+                    "windowId": "S25_FNCS_Major3_Week2_ASIA_Day1_634556ef-99da-4278-aa01-5ae42080da7b",
+                    "sessionName": "Day 1 Session 1",
+                    "eventTitle": "FNCS Major 3 WEEK 2",
+                    "eventName": "S25_FNCS_Major3_Week2_ASIA_Day1",
+                    "point": 0,
+                    "eventRank": 947,
+                    "eventDate": "2023-07-27T14:00:00Z"
+                },
+                {
+                    "windowId": "S25_FNCS_Major3_Week1_ASIA_Day1_634556ef-99da-4278-aa01-5ae42080da7b",
+                    "sessionName": "Day 1 Session 1",
+                    "eventTitle": "FNCS Major 3 WEEK 1",
+                    "eventName": "S25_FNCS_Major3_Week1_ASIA_Day1",
+                    "point": 0,
+                    "eventRank": 705,
+                    "eventDate": "2023-07-20T14:00:00Z"
+                }
+            ]
+        },
+        "S24": {
+            "point": 0,
+            "events": [
+                {
+                    "windowId": "S24_DuosCashCup_ASIA_Event6_Round1_ed4d4d51-b9a0-43f6-8afd-8577ffc4119f",
+                    "sessionName": " Session 6 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S24_DuosCashCup_ASIA_Event6_Round1",
+                    "point": 0,
+                    "eventRank": 431,
+                    "eventDate": "2023-06-02T14:00:00Z"
+                },
+                {
+                    "windowId": "S24_DuosCashCup_ASIA_Event5_Round1_ed4d4d51-b9a0-43f6-8afd-8577ffc4119f",
+                    "sessionName": " Session 5 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S24_DuosCashCup_ASIA_Event5_Round1",
+                    "point": 0,
+                    "eventRank": 626,
+                    "eventDate": "2023-05-26T14:00:00Z"
+                },
+                {
+                    "windowId": "S24_DuosCashCup_ASIA_Event4_Round1_ed4d4d51-b9a0-43f6-8afd-8577ffc4119f",
+                    "sessionName": " Session 4 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S24_DuosCashCup_ASIA_Event4_Round1",
+                    "point": 0,
+                    "eventRank": 388,
+                    "eventDate": "2023-05-11T14:00:00Z"
+                },
+                {
+                    "windowId": "S24_DuosCashCup_ASIA_Event3_Round1_ed4d4d51-b9a0-43f6-8afd-8577ffc4119f",
+                    "sessionName": " Session 3 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S24_DuosCashCup_ASIA_Event3_Round1",
+                    "point": 0,
+                    "eventRank": 1313,
+                    "eventDate": "2023-05-04T14:00:00Z"
+                },
+                {
+                    "windowId": "S24_DuosCashCup_ASIA_Event2_Round1_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": " Session 2 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S24_DuosCashCup_ASIA_Event2_Round1",
+                    "point": 0,
+                    "eventRank": 3919,
+                    "eventDate": "2023-04-07T14:00:00Z"
+                },
+                {
+                    "windowId": "S24_DuosCashCup_ASIA_Event1_Round1_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": " Session 1 Round 1",
+                    "eventTitle": "Duos Cash Cup",
+                    "eventName": "S24_DuosCashCup_ASIA_Event1_Round1",
+                    "point": 0,
+                    "eventRank": 2952,
+                    "eventDate": "2023-03-31T14:00:00Z"
+                },
+                {
+                    "windowId": "S24_SoloVictoryCup_Event7_Round1_ASIA_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 7 Round 1",
+                    "eventTitle": "Solo Victory Cash Cup",
+                    "eventName": "S24_SoloVictoryCup_Event7_Round1_ASIA",
+                    "point": 0,
+                    "eventRank": 4498,
+                    "eventDate": "2023-05-14T11:00:00Z"
+                },
+                {
+                    "windowId": "S24_FNCS_Major2_Week3_ASIA_Day1_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Day 1 Session 1",
+                    "eventTitle": "FNCS Major 2 WEEK 3",
+                    "eventName": "S24_FNCS_Major2_Week3_ASIA_Day1",
+                    "point": 0,
+                    "eventRank": 1166,
+                    "eventDate": "2023-04-27T14:00:00Z"
+                },
+                {
+                    "windowId": "S24_FNCS_Major2_Week1_ASIA_Day1_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Day 1 Session 1",
+                    "eventTitle": "FNCS Major 2 WEEK 1",
+                    "eventName": "S24_FNCS_Major2_Week1_ASIA_Day1",
+                    "point": 0,
+                    "eventRank": 2050,
+                    "eventDate": "2023-04-13T14:00:00Z"
+                },
+                {
+                    "windowId": "S24_MamaBenjyFishy_ASIA_Round1_487461b8-ddae-4b98-bd77-0d3d22b91c63",
+                    "sessionName": " Round 1",
+                    "eventTitle": "MamaBenjyFishy Creator Cup",
+                    "eventName": "S24_MamaBenjyFishy_ASIA_Round1",
+                    "point": 0,
+                    "eventRank": 1716,
+                    "eventDate": "2023-03-17T14:00:00Z"
+                }
+            ]
+        },
+        "S23": {
+            "point": 0,
+            "events": [
+                {
+                    "windowId": "S23_DivisionalCups_Contender_ASIA_Event18_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 9 Day 2",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S23_DivisionalCups_Contender_ASIA_Event18",
+                    "point": 0,
+                    "eventRank": 65,
+                    "eventDate": "2023-03-03T15:00:00Z"
+                },
+                {
+                    "windowId": "S23_DivisionalCups_Contender_ASIA_Event17_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 9 Day 1",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S23_DivisionalCups_Contender_ASIA_Event17",
+                    "point": 0,
+                    "eventRank": 111,
+                    "eventDate": "2023-03-01T15:00:00Z"
+                },
+                {
+                    "windowId": "S23_DivisionalCups_Contender_ASIA_Event16_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 8 Day 2",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S23_DivisionalCups_Contender_ASIA_Event16",
+                    "point": 0,
+                    "eventRank": 530,
+                    "eventDate": "2023-02-24T15:00:00Z"
+                },
+                {
+                    "windowId": "S23_DivisionalCups_Contender_ASIA_Event15_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 8 Day 1",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S23_DivisionalCups_Contender_ASIA_Event15",
+                    "point": 0,
+                    "eventRank": 152,
+                    "eventDate": "2023-02-22T15:00:00Z"
+                },
+                {
+                    "windowId": "S23_DivisionalCups_Contender_ASIA_Event13_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 7 Day 1",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S23_DivisionalCups_Contender_ASIA_Event13",
+                    "point": 0,
+                    "eventRank": 2694,
+                    "eventDate": "2023-02-15T15:00:00Z"
+                },
+                {
+                    "windowId": "S23_DivisionalCups_Contender_ASIA_Event12_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 6 Day 2",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S23_DivisionalCups_Contender_ASIA_Event12",
+                    "point": 0,
+                    "eventRank": 133,
+                    "eventDate": "2023-02-10T15:00:00Z"
+                },
+                {
+                    "windowId": "S23_DivisionalCups_Contender_ASIA_Event11_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 6 Day 1",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S23_DivisionalCups_Contender_ASIA_Event11",
+                    "point": 0,
+                    "eventRank": 479,
+                    "eventDate": "2023-02-08T15:00:00Z"
+                },
+                {
+                    "windowId": "S23_DivisionalCups_Contender_ASIA_Event10_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 5 Day 2",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S23_DivisionalCups_Contender_ASIA_Event10",
+                    "point": 0,
+                    "eventRank": 676,
+                    "eventDate": "2023-02-03T15:00:00Z"
+                },
+                {
+                    "windowId": "S23_DivisionalCups_Contender_ASIA_Event9_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 5 Day 1",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S23_DivisionalCups_Contender_ASIA_Event9",
+                    "point": 0,
+                    "eventRank": 510,
+                    "eventDate": "2023-02-01T15:00:00Z"
+                },
+                {
+                    "windowId": "S23_DivisionalCups_Contender_ASIA_Event8_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 4 Day 2",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S23_DivisionalCups_Contender_ASIA_Event8",
+                    "point": 0,
+                    "eventRank": 4355,
+                    "eventDate": "2023-01-27T15:00:00Z"
+                },
+                {
+                    "windowId": "S23_DivisionalCups_Contender_ASIA_Event6_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 3 Day 2",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S23_DivisionalCups_Contender_ASIA_Event6",
+                    "point": 0,
+                    "eventRank": 571,
+                    "eventDate": "2023-01-20T15:00:00Z"
+                },
+                {
+                    "windowId": "S23_DivisionalCups_Contender_ASIA_Event5_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 3 Day 1",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S23_DivisionalCups_Contender_ASIA_Event5",
+                    "point": 0,
+                    "eventRank": 190,
+                    "eventDate": "2023-01-19T15:00:00Z"
+                },
+                {
+                    "windowId": "S23_DivisionalCups_Contender_ASIA_Event4_ed4d4d51-b9a0-43f6-8afd-8577ffc4119f",
+                    "sessionName": "Week 2 Day 2",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S23_DivisionalCups_Contender_ASIA_Event4",
+                    "point": 0,
+                    "eventRank": 726,
+                    "eventDate": "2023-01-13T15:00:00Z"
+                },
+                {
+                    "windowId": "S23_DivisionalCups_Contender_ASIA_Event3_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 2 Day 1",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S23_DivisionalCups_Contender_ASIA_Event3",
+                    "point": 0,
+                    "eventRank": 867,
+                    "eventDate": "2023-01-11T15:00:00Z"
+                },
+                {
+                    "windowId": "S23_DivisionalCups_Contender_ASIA_Event2_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 1 Day 2",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S23_DivisionalCups_Contender_ASIA_Event2",
+                    "point": 0,
+                    "eventRank": 1531,
+                    "eventDate": "2023-01-06T15:00:00Z"
+                },
+                {
+                    "windowId": "S23_DivisionalCups_Contender_ASIA_Event1_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 1 Day 1",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S23_DivisionalCups_Contender_ASIA_Event1",
+                    "point": 0,
+                    "eventRank": 216,
+                    "eventDate": "2023-01-04T15:00:00Z"
+                },
+                {
+                    "windowId": "S23_SoloCashCup_Event8_Round1_ASIA_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 8 Round 1",
+                    "eventTitle": "Solo Victory Cash Cup",
+                    "eventName": "S23_SoloCashCup_Event8_Round1_ASIA",
+                    "point": 0,
+                    "eventRank": 3737,
+                    "eventDate": "2023-02-25T11:00:00Z"
+                },
+                {
+                    "windowId": "S23_SoloCashCup_Event1_Round1_ASIA_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 1 Round 1",
+                    "eventTitle": "Solo Victory Cash Cup",
+                    "eventName": "S23_SoloCashCup_Event1_Round1_ASIA",
+                    "point": 0,
+                    "eventRank": 7496,
+                    "eventDate": "2023-01-07T11:00:00Z"
+                },
+                {
+                    "windowId": "S23_LGSoloCashCup_ASIA_Event6_Round1_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 6 Round 1",
+                    "eventTitle": "Late Game Solo Cash Cup",
+                    "eventName": "S23_LGSoloCashCup_ASIA_Event6_Round1",
+                    "point": 0,
+                    "eventRank": 4371,
+                    "eventDate": "2023-01-30T15:00:00Z"
+                },
+                {
+                    "windowId": "S23_LGTriosCashCup_ASIA_Event5_Round1_82554a47-e2b8-4ffc-9780-03c7e3c319c6",
+                    "sessionName": " Session 5 Round 1",
+                    "eventTitle": "Late Game Trios Cash Cup",
+                    "eventName": "S23_LGTriosCashCup_ASIA_Event5_Round1",
+                    "point": 0,
+                    "eventRank": 1080,
+                    "eventDate": "2023-01-29T15:00:00Z"
+                },
+                {
+                    "windowId": "S23_PlacementCup_ASIA_Event1_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": " Session 1",
+                    "eventTitle": "Placement Cup",
+                    "eventName": "S23_PlacementCup_ASIA_Event1",
+                    "point": 0,
+                    "eventRank": 2222,
+                    "eventDate": "2022-12-15T15:00:00Z"
+                }
+            ]
+        },
+        "S22": {
+            "point": 0,
+            "events": [
+                {
+                    "windowId": "S22_DivisionalCups_Contender_ASIA_Event14_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 7 Day 2",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S22_DivisionalCups_Contender_ASIA_Event14",
+                    "point": 0,
+                    "eventRank": 484,
+                    "eventDate": "2022-11-18T15:00:00Z"
+                },
+                {
+                    "windowId": "S22_DivisionalCups_Contender_ASIA_Event13_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 7 Day 1",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S22_DivisionalCups_Contender_ASIA_Event13",
+                    "point": 0,
+                    "eventRank": 340,
+                    "eventDate": "2022-11-16T15:00:00Z"
+                },
+                {
+                    "windowId": "S22_DivisionalCups_Contender_ASIA_Event11_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 6 Day 1",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S22_DivisionalCups_Contender_ASIA_Event11",
+                    "point": 0,
+                    "eventRank": 856,
+                    "eventDate": "2022-11-02T14:00:00Z"
+                },
+                {
+                    "windowId": "S22_DivisionalCups_Contender_ASIA_Event10_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 5 Day 2",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S22_DivisionalCups_Contender_ASIA_Event10",
+                    "point": 0,
+                    "eventRank": 643,
+                    "eventDate": "2022-10-28T14:00:00Z"
+                },
+                {
+                    "windowId": "S22_DivisionalCups_Contender_ASIA_Event9_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 5 Day 1",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S22_DivisionalCups_Contender_ASIA_Event9",
+                    "point": 0,
+                    "eventRank": 488,
+                    "eventDate": "2022-10-26T14:00:00Z"
+                },
+                {
+                    "windowId": "S22_DivisionalCups_Contender_ASIA_Event8_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 4 Day 2",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S22_DivisionalCups_Contender_ASIA_Event8",
+                    "point": 0,
+                    "eventRank": 2112,
+                    "eventDate": "2022-10-21T14:00:00Z"
+                },
+                {
+                    "windowId": "S22_DivisionalCups_Contender_ASIA_Event7_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 4 Day 1",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S22_DivisionalCups_Contender_ASIA_Event7",
+                    "point": 0,
+                    "eventRank": 2036,
+                    "eventDate": "2022-10-19T14:00:00Z"
+                },
+                {
+                    "windowId": "S22_DivisionalCups_Contender_ASIA_Event6_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 3 Day 2",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S22_DivisionalCups_Contender_ASIA_Event6",
+                    "point": 0,
+                    "eventRank": 365,
+                    "eventDate": "2022-10-14T14:00:00Z"
+                },
+                {
+                    "windowId": "S22_DivisionalCups_Contender_ASIA_Event5_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 3 Day 1",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S22_DivisionalCups_Contender_ASIA_Event5",
+                    "point": 0,
+                    "eventRank": 557,
+                    "eventDate": "2022-10-12T14:00:00Z"
+                },
+                {
+                    "windowId": "S22_DivisionalCups_Contender_ASIA_Event4_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 2 Day 2",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S22_DivisionalCups_Contender_ASIA_Event4",
+                    "point": 0,
+                    "eventRank": 414,
+                    "eventDate": "2022-10-07T14:00:00Z"
+                },
+                {
+                    "windowId": "S22_DivisionalCups_Contender_ASIA_Event3_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 2 Day 1",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S22_DivisionalCups_Contender_ASIA_Event3",
+                    "point": 0,
+                    "eventRank": 341,
+                    "eventDate": "2022-10-05T14:00:00Z"
+                },
+                {
+                    "windowId": "S22_DivisionalCups_Contender_ASIA_Event2_5c47c5e0-df52-41f7-a0b2-e56f1c788267",
+                    "sessionName": "Week 1 Day 2",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S22_DivisionalCups_Contender_ASIA_Event2",
+                    "point": 0,
+                    "eventRank": 2688,
+                    "eventDate": "2022-09-30T14:00:00Z"
+                },
+                {
+                    "windowId": "S22_DivisionalCups_Contender_ASIA_Event1_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": "Week 1 Day 1",
+                    "eventTitle": "Contender Cup",
+                    "eventName": "S22_DivisionalCups_Contender_ASIA_Event1",
+                    "point": 0,
+                    "eventRank": 309,
+                    "eventDate": "2022-09-28T14:00:00Z"
+                },
+                {
+                    "windowId": "S22_QueasyCup_ASIA_Round1_45c7b653-9fb9-45f3-bf72-105cf35e8cd4",
+                    "sessionName": " Round 1",
+                    "eventTitle": "Queasy Cup",
+                    "eventName": "S22_QueasyCup_ASIA_Round1",
+                    "point": 0,
+                    "eventRank": 1279,
+                    "eventDate": "2022-09-25T11:00:00Z"
+                },
+                {
+                    "windowId": "S22_PlacementCup_ASIA_Event1_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": " Session 1",
+                    "eventTitle": "Placement Cup",
+                    "eventName": "S22_PlacementCup_ASIA_Event1",
+                    "point": 0,
+                    "eventRank": 1055,
+                    "eventDate": "2022-09-24T10:00:00Z"
+                }
+            ]
+        },
+        "S21": {
+            "point": 0,
+            "events": [
+                {
+                    "windowId": "S21_LGTriosCashCup_ASIA_Event1_Round1_45c7b653-9fb9-45f3-bf72-105cf35e8cd4",
+                    "sessionName": " Session 1 Round 1",
+                    "eventTitle": "Late Game Trios Cash Cup",
+                    "eventName": "S21_LGTriosCashCup_ASIA_Event1_Round1",
+                    "point": 0,
+                    "eventRank": 1736,
+                    "eventDate": "2022-09-08T14:00:00Z"
+                },
+                {
+                    "windowId": "S21_DuosCashCup_ASIA_Event4_Round1_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": " Session 4 Round 1",
+                    "eventTitle": "DUOS CASH CUP",
+                    "eventName": "S21_DuosCashCup_ASIA_Event4_Round1",
+                    "point": 0,
+                    "eventRank": 2707,
+                    "eventDate": "2022-07-19T14:00:00Z"
+                },
+                {
+                    "windowId": "S21_DuosCashCup_ASIA_Event5_Round1_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": " Session 5 Round 1",
+                    "eventTitle": "DUOS CASH CUP",
+                    "eventName": "S21_DuosCashCup_ASIA_Event5_Round1",
+                    "point": 0,
+                    "eventRank": 1666,
+                    "eventDate": "2022-08-08T14:00:00Z"
+                },
+                {
+                    "windowId": "S21_DuosCashCup_ASIA_Event6_Round1_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": " Session 6 Round 1",
+                    "eventTitle": "DUOS CASH CUP",
+                    "eventName": "S21_DuosCashCup_ASIA_Event6_Round1",
+                    "point": 0,
+                    "eventRank": 1629,
+                    "eventDate": "2022-08-20T10:00:00Z"
+                },
+                {
+                    "windowId": "S21_DuosCashCup_ASIA_Event7_Round1_ed4d4d51-b9a0-43f6-8afd-8577ffc4119f",
+                    "sessionName": " Session 7 Round 1",
+                    "eventTitle": "DUOS CASH CUP",
+                    "eventName": "S21_DuosCashCup_ASIA_Event7_Round1",
+                    "point": 0,
+                    "eventRank": 1169,
+                    "eventDate": "2022-08-27T10:00:00Z"
+                },
+                {
+                    "windowId": "S21_DuosCashCup_ASIA_Event8_Round1_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": " Session 8 Round 1",
+                    "eventTitle": "DUOS CASH CUP",
+                    "eventName": "S21_DuosCashCup_ASIA_Event8_Round1",
+                    "point": 0,
+                    "eventRank": 3244,
+                    "eventDate": "2022-09-03T10:00:00Z"
+                },
+                {
+                    "windowId": "S21_TriosQuickCashCup_ASIA_Event7_573311da-0a16-45ab-bd5d-d2b53abe237c",
+                    "sessionName": " Session 7",
+                    "eventTitle": "QUICK TRIOS CASH CUP",
+                    "eventName": "S21_TriosQuickCashCup_ASIA_Event7",
+                    "point": 0,
+                    "eventRank": 1048,
+                    "eventDate": "2022-09-02T14:00:00Z"
+                },
+                {
+                    "windowId": "S21_TriosQuickCashCup_ASIA_Event6_d3b81750-81e9-4145-970f-865dc8ccdd8c",
+                    "sessionName": " Session 6",
+                    "eventTitle": "QUICK TRIOS CASH CUP",
+                    "eventName": "S21_TriosQuickCashCup_ASIA_Event6",
+                    "point": 0,
+                    "eventRank": 1282,
+                    "eventDate": "2022-08-26T14:00:00Z"
+                },
+                {
+                    "windowId": "S21_TriosQuickCashCup_ASIA_Event3_2dd7e620-f290-4ffd-ae2d-0ec63f522ac2",
+                    "sessionName": " Session 3",
+                    "eventTitle": "QUICK TRIOS CASH CUP",
+                    "eventName": "S21_TriosQuickCashCup_ASIA_Event3",
+                    "point": 0,
+                    "eventRank": 1420,
+                    "eventDate": "2022-07-22T14:00:00Z"
+                },
+                {
+                    "windowId": "S21_TriosQuickCashCup_ASIA_Event9_2dd7e620-f290-4ffd-ae2d-0ec63f522ac2",
+                    "sessionName": " Session 9",
+                    "eventTitle": "QUICK TRIOS CASH CUP",
+                    "eventName": "S21_TriosQuickCashCup_ASIA_Event9",
+                    "point": 0,
+                    "eventRank": 642,
+                    "eventDate": "2022-07-15T14:00:00Z"
+                },
+                {
+                    "windowId": "S21_TriosQuickCashCup_ASIA_Event1_ac94c730-7bff-41dc-9a93-7037eeda688e",
+                    "sessionName": " Session 1",
+                    "eventTitle": "QUICK TRIOS CASH CUP",
+                    "eventName": "S21_TriosQuickCashCup_ASIA_Event1",
+                    "point": 0,
+                    "eventRank": 738,
+                    "eventDate": "2022-06-24T14:00:00Z"
+                },
+                {
+                    "windowId": "S21_PgodCup_ASIA_Round1_2dd7e620-f290-4ffd-ae2d-0ec63f522ac2",
+                    "sessionName": " Round 1",
+                    "eventTitle": "Pgod Cup",
+                    "eventName": "S21_PgodCup_ASIA_Round1",
+                    "point": 0,
+                    "eventRank": 912,
+                    "eventDate": "2022-08-11T11:00:00Z"
+                },
+                {
+                    "windowId": "S21_FNCS_Qualifier3_ASIA_Round1_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": " Round 1",
+                    "eventTitle": "FNCS QUALIFIER 3",
+                    "eventName": "S21_FNCS_Qualifier3_ASIA_Round1",
+                    "point": 0,
+                    "eventRank": 2054,
+                    "eventDate": "2022-07-16T10:00:00Z"
+                }
+            ]
+        },
+        "S20": {
+            "point": 0,
+            "events": [
+                {
+                    "windowId": "S20_DuosCashCup_ASIA_Event1_Round1_4b055ebc-e94d-4693-b3c1-9f40ecaa7edc",
+                    "sessionName": " Session 1 Round 1",
+                    "eventTitle": "DUOS CASH CUP",
+                    "eventName": "S20_DuosCashCup_ASIA_Event1_Round1",
+                    "point": 0,
+                    "eventRank": 1656,
+                    "eventDate": "2022-04-04T14:00:00Z"
+                },
+                {
+                    "windowId": "S20_DuosCashCup_ASIA_Event2_Round1_ed4d4d51-b9a0-43f6-8afd-8577ffc4119f",
+                    "sessionName": " Session 2 Round 1",
+                    "eventTitle": "DUOS CASH CUP",
+                    "eventName": "S20_DuosCashCup_ASIA_Event2_Round1",
+                    "point": 0,
+                    "eventRank": 1441,
+                    "eventDate": "2022-04-11T14:00:00Z"
+                },
+                {
+                    "windowId": "S20_DuosCashCup_ASIA_Event3_Round1_2e6c3f56-0bf5-4cd0-8820-bef7b4121114",
+                    "sessionName": " Session 3 Round 1",
+                    "eventTitle": "DUOS CASH CUP",
+                    "eventName": "S20_DuosCashCup_ASIA_Event3_Round1",
+                    "point": 0,
+                    "eventRank": 2414,
+                    "eventDate": "2022-04-18T14:00:00Z"
+                },
+                {
+                    "windowId": "S20_DuosCashCup_ASIA_Event5_Round1_ed4d4d51-b9a0-43f6-8afd-8577ffc4119f",
+                    "sessionName": " Session 5 Round 1",
+                    "eventTitle": "DUOS CASH CUP",
+                    "eventName": "S20_DuosCashCup_ASIA_Event5_Round1",
+                    "point": 0,
+                    "eventRank": 2011,
+                    "eventDate": "2022-05-09T14:00:00Z"
+                },
+                {
+                    "windowId": "S20_DuosCashCup_ASIA_Event6_Round1_ed4d4d51-b9a0-43f6-8afd-8577ffc4119f",
+                    "sessionName": " Session 6 Round 1",
+                    "eventTitle": "DUOS CASH CUP",
+                    "eventName": "S20_DuosCashCup_ASIA_Event6_Round1",
+                    "point": 0,
+                    "eventRank": 1776,
+                    "eventDate": "2022-05-16T14:00:00Z"
+                },
+                {
+                    "windowId": "S20_DuosCashCup_ASIA_Event7_Round1_ed4d4d51-b9a0-43f6-8afd-8577ffc4119f",
+                    "sessionName": " Session 7 Round 1",
+                    "eventTitle": "DUOS CASH CUP",
+                    "eventName": "S20_DuosCashCup_ASIA_Event7_Round1",
+                    "point": 0,
+                    "eventRank": 2720,
+                    "eventDate": "2022-05-23T14:00:00Z"
+                },
+                {
+                    "windowId": "S20_DuosCashCup_ASIA_Event8_Round1_7dc84de5-9d34-486b-abf8-3e2f2b3a384d",
+                    "sessionName": " Session 8 Round 1",
+                    "eventTitle": "DUOS CASH CUP",
+                    "eventName": "S20_DuosCashCup_ASIA_Event8_Round1",
+                    "point": 0,
+                    "eventRank": 3518,
+                    "eventDate": "2022-05-30T14:00:00Z"
+                },
+                {
+                    "windowId": "S20_SoloCashCup_ASIA_Event1_Round1_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 1 Round 1",
+                    "eventTitle": "SOLO CASH CUP",
+                    "eventName": "S20_SoloCashCup_ASIA_Event1_Round1",
+                    "point": 0,
+                    "eventRank": 4620,
+                    "eventDate": "2022-04-09T10:00:00Z"
+                },
+                {
+                    "windowId": "S20_SoloCashCup_ASIA_Event3_Round1_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 3 Round 1",
+                    "eventTitle": "SOLO CASH CUP",
+                    "eventName": "S20_SoloCashCup_ASIA_Event3_Round1",
+                    "point": 0,
+                    "eventRank": 6056,
+                    "eventDate": "2022-04-23T10:00:00Z"
+                },
+                {
+                    "windowId": "S20_SoloCashCup_ASIA_Event4_Round1_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 4 Round 1",
+                    "eventTitle": "SOLO CASH CUP",
+                    "eventName": "S20_SoloCashCup_ASIA_Event4_Round1",
+                    "point": 0,
+                    "eventRank": 6255,
+                    "eventDate": "2022-04-30T10:00:00Z"
+                },
+                {
+                    "windowId": "S20_SoloCashCup_ASIA_Event5_Round1_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 5 Round 1",
+                    "eventTitle": "SOLO CASH CUP",
+                    "eventName": "S20_SoloCashCup_ASIA_Event5_Round1",
+                    "point": 0,
+                    "eventRank": 4909,
+                    "eventDate": "2022-05-21T10:00:00Z"
+                },
+                {
+                    "windowId": "S20_FNCS_Qualifier3_ASIA_Round1_ed4d4d51-b9a0-43f6-8afd-8577ffc4119f",
+                    "sessionName": " Round 1",
+                    "eventTitle": "FNCS QUALIFIER 3",
+                    "eventName": "S20_FNCS_Qualifier3_ASIA_Round1",
+                    "point": 0,
+                    "eventRank": 2791,
+                    "eventDate": "2022-05-13T14:00:00Z"
+                },
+                {
+                    "windowId": "S20_FNCS_Qualifier2_ASIA_Round1_85c96774-bf9f-4a90-a4eb-8de47cb50ced",
+                    "sessionName": " Round 1",
+                    "eventTitle": "FNCS QUALIFIER 2",
+                    "eventName": "S20_FNCS_Qualifier2_ASIA_Round1",
+                    "point": 0,
+                    "eventRank": 3762,
+                    "eventDate": "2022-05-07T10:00:00Z"
+                }
+            ]
+        },
+        "S19": {
+            "point": 0,
+            "events": [
+                {
+                    "windowId": "S19_SoloCashCup_ASIA_Event3_Round1_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 3 Round 1",
+                    "eventTitle": "SOLO CASH CUP",
+                    "eventName": "S19_SoloCashCup_ASIA_Event3_Round1",
+                    "point": 0,
+                    "eventRank": 2836,
+                    "eventDate": "2022-01-29T10:00:00Z"
+                },
+                {
+                    "windowId": "S19_SoloCashCup_ASIA_Event2_Round1_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 2 Round 1",
+                    "eventTitle": "SOLO CASH CUP",
+                    "eventName": "S19_SoloCashCup_ASIA_Event2_Round1",
+                    "point": 0,
+                    "eventRank": 2814,
+                    "eventDate": "2022-01-22T10:00:00Z"
+                },
+                {
+                    "windowId": "S19_SoloCashCup_ASIA_Event1_Round1_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 1 Round 1",
+                    "eventTitle": "SOLO CASH CUP",
+                    "eventName": "S19_SoloCashCup_ASIA_Event1_Round1",
+                    "point": 0,
+                    "eventRank": 3068,
+                    "eventDate": "2022-01-15T10:00:00Z"
+                },
+                {
+                    "windowId": "S19_FNCS_Qualifier2_ASIA_Round1_dfa82f80-5aab-4529-9f9e-bb42c88ed1d8",
+                    "sessionName": " Round 1",
+                    "eventTitle": "FNCS QUALIFIER 2",
+                    "eventName": "S19_FNCS_Qualifier2_ASIA_Round1",
+                    "point": 0,
+                    "eventRank": 5754,
+                    "eventDate": "2022-02-19T15:00:00Z"
+                },
+                {
+                    "windowId": "S19_FNCS_Qualifier1_ASIA_Round1_5400fd13-0576-4f89-ac7d-aa235538f685",
+                    "sessionName": " Round 1",
+                    "eventTitle": "FNCS QUALIFIER 1",
+                    "eventName": "S19_FNCS_Qualifier1_ASIA_Round1",
+                    "point": 0,
+                    "eventRank": 3939,
+                    "eventDate": "2022-02-17T15:00:00Z"
+                },
+                {
+                    "windowId": "S19_DuosCashCup_ASIA_Event6_Round1_1b9c4587-1e89-4ec3-a2c6-1d1c061168fa",
+                    "sessionName": " Session 6 Round 1",
+                    "eventTitle": "DUOS CASH CUP",
+                    "eventName": "S19_DuosCashCup_ASIA_Event6_Round1",
+                    "point": 0,
+                    "eventRank": 5376,
+                    "eventDate": "2022-02-14T15:00:00Z"
+                },
+                {
+                    "windowId": "S19_DuosCashCup_ASIA_Event3_Round1_8595a9f9-35b9-41f4-977e-3fe0a0e3a5f8",
+                    "sessionName": " Session 3 Round 1",
+                    "eventTitle": "DUOS CASH CUP",
+                    "eventName": "S19_DuosCashCup_ASIA_Event3_Round1",
+                    "point": 0,
+                    "eventRank": 2554,
+                    "eventDate": "2022-01-24T15:00:00Z"
+                },
+                {
+                    "windowId": "S19_DuosCashCup_ASIA_Event2_Round1_dfa82f80-5aab-4529-9f9e-bb42c88ed1d8",
+                    "sessionName": " Session 2 Round 1",
+                    "eventTitle": "DUOS CASH CUP",
+                    "eventName": "S19_DuosCashCup_ASIA_Event2_Round1",
+                    "point": 0,
+                    "eventRank": 4109,
+                    "eventDate": "2022-01-19T15:00:00Z"
+                },
+                {
+                    "windowId": "S19_DuosCashCup_ASIA_Event1_Round1_dfa82f80-5aab-4529-9f9e-bb42c88ed1d8",
+                    "sessionName": " Session 1 Round 1",
+                    "eventTitle": "DUOS CASH CUP",
+                    "eventName": "S19_DuosCashCup_ASIA_Event1_Round1",
+                    "point": 0,
+                    "eventRank": 4330,
+                    "eventDate": "2022-01-10T15:00:00Z"
+                }
+            ]
+        },
+        "S18": {
+            "point": 0,
+            "events": [
+                {
+                    "windowId": "S18_CashCup_ASIA_Event9_d25097eb-45a9-4671-a831-0bf9cea4b6f4",
+                    "sessionName": " Session 9",
+                    "eventTitle": "TRIOS CASH CUP",
+                    "eventName": "S18_CashCup_ASIA_Event9",
+                    "point": 0,
+                    "eventRank": 1967,
+                    "eventDate": "2021-11-29T15:00:00Z"
+                },
+                {
+                    "windowId": "S18_CashCup_ASIA_Event8_60beabb8-37df-44fe-9812-ea441bd1a6a0",
+                    "sessionName": " Session 8",
+                    "eventTitle": "TRIOS CASH CUP",
+                    "eventName": "S18_CashCup_ASIA_Event8",
+                    "point": 0,
+                    "eventRank": 2954,
+                    "eventDate": "2021-11-22T15:00:00Z"
+                },
+                {
+                    "windowId": "S18_CashCup_ASIA_Event7_884c1347-77b5-473f-937f-7dca48f07e59",
+                    "sessionName": " Session 7",
+                    "eventTitle": "TRIOS CASH CUP",
+                    "eventName": "S18_CashCup_ASIA_Event7",
+                    "point": 0,
+                    "eventRank": 2288,
+                    "eventDate": "2021-11-15T15:00:00Z"
+                },
+                {
+                    "windowId": "S18_CashCup_ASIA_Event6_884c1347-77b5-473f-937f-7dca48f07e59",
+                    "sessionName": " Session 6",
+                    "eventTitle": "TRIOS CASH CUP",
+                    "eventName": "S18_CashCup_ASIA_Event6",
+                    "point": 0,
+                    "eventRank": 2661,
+                    "eventDate": "2021-11-08T15:00:00Z"
+                },
+                {
+                    "windowId": "S18_CashCup_ASIA_Event5_f07c0750-19e4-4012-a98a-cd2b61c849a4",
+                    "sessionName": " Session 5",
+                    "eventTitle": "TRIOS CASH CUP",
+                    "eventName": "S18_CashCup_ASIA_Event5",
+                    "point": 0,
+                    "eventRank": 1125,
+                    "eventDate": "2021-11-01T14:00:00Z"
+                },
+                {
+                    "windowId": "S18_SoloCashCup_ASIA_Event9_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 9",
+                    "eventTitle": "SOLO CASH CUP",
+                    "eventName": "S18_SoloCashCup_ASIA_Event9",
+                    "point": 0,
+                    "eventRank": 6738,
+                    "eventDate": "2021-11-28T10:00:00Z"
+                },
+                {
+                    "windowId": "S18_SoloCashCup_ASIA_Event8_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 8",
+                    "eventTitle": "SOLO CASH CUP",
+                    "eventName": "S18_SoloCashCup_ASIA_Event8",
+                    "point": 0,
+                    "eventRank": 2708,
+                    "eventDate": "2021-11-21T10:00:00Z"
+                },
+                {
+                    "windowId": "S18_SoloCashCup_ASIA_Event7_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 7",
+                    "eventTitle": "SOLO CASH CUP",
+                    "eventName": "S18_SoloCashCup_ASIA_Event7",
+                    "point": 0,
+                    "eventRank": 3736,
+                    "eventDate": "2021-11-14T10:00:00Z"
+                },
+                {
+                    "windowId": "S18_SoloCashCup_ASIA_Event6_eab1452c-0402-47a0-a9c0-cf857ac77bdd",
+                    "sessionName": " Session 6",
+                    "eventTitle": "SOLO CASH CUP",
+                    "eventName": "S18_SoloCashCup_ASIA_Event6",
+                    "point": 0,
+                    "eventRank": 1481,
+                    "eventDate": "2021-11-07T10:00:00Z"
+                }
+            ]
+        },
+        "S17": {
+            "point": 0,
+            "events": [
+                {
+                    "windowId": "S17_CashCup_ASIA_Event8_00343b70-c890-44c6-8f40-5d09c7587e92",
+                    "sessionName": " Session 8",
+                    "eventTitle": "TRIOS CASH CUP",
+                    "eventName": "S17_CashCup_ASIA_Event8",
+                    "point": 0,
+                    "eventRank": 3956,
+                    "eventDate": "2021-08-30T14:00:00Z"
+                },
+                {
+                    "windowId": "S17_CashCup_ASIA_Event7_00343b70-c890-44c6-8f40-5d09c7587e92",
+                    "sessionName": " Session 7",
+                    "eventTitle": "TRIOS CASH CUP",
+                    "eventName": "S17_CashCup_ASIA_Event7",
+                    "point": 0,
+                    "eventRank": 2753,
+                    "eventDate": "2021-08-23T14:00:00Z"
+                },
+                {
+                    "windowId": "S17_CashCup_ASIA_Event6_5ba8136a-7e51-4ca1-af36-39943ed97437",
+                    "sessionName": " Session 6",
+                    "eventTitle": "TRIOS CASH CUP",
+                    "eventName": "S17_CashCup_ASIA_Event6",
+                    "point": 0,
+                    "eventRank": 5189,
+                    "eventDate": "2021-08-16T14:00:00Z"
+                },
+                {
+                    "windowId": "S17_FNCS_Qualifier3_ASIA_Event1_00343b70-c890-44c6-8f40-5d09c7587e92",
+                    "sessionName": " Session 1",
+                    "eventTitle": "FNCS QUALIFIER 3",
+                    "eventName": "S17_FNCS_Qualifier3_ASIA_Event1",
+                    "point": 0,
+                    "eventRank": 4758,
+                    "eventDate": "2021-08-20T13:00:00Z"
+                },
+                {
+                    "windowId": "S17_FNCS_Qualifier2_ASIA_Event1_1b5ba00f-8cae-4f3c-9748-407c41d41c72",
+                    "sessionName": " Session 1",
+                    "eventTitle": "FNCS QUALIFIER 2",
+                    "eventName": "S17_FNCS_Qualifier2_ASIA_Event1",
+                    "point": 0,
+                    "eventRank": 6466,
+                    "eventDate": "2021-08-13T13:00:00Z"
+                }
+            ]
+        },
+        "S15": {
+            "point": 0,
+            "events": [
+                {
+                    "windowId": "S15_FrostyFrenzy_ASIA_Day2_Event2_Round1_MakeGood_dd35379c-75a2-4667-a221-7b0ce1bba301",
+                    "sessionName": "Day 2 Session 2 Round 1",
+                    "eventTitle": "Frosty Frenzy",
+                    "eventName": "S15_FrostyFrenzy_ASIA_Day2_Event2_Round1_MakeGood",
+                    "point": 0,
+                    "eventRank": 3726,
+                    "eventDate": "2020-12-19T15:00:00Z"
+                }
+            ]
+        }
+    }
+}
