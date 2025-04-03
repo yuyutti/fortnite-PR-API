@@ -1,0 +1,274 @@
+[
+  {
+    "season": 1,
+    "chapter": 1,
+    "seasonInChapter": 1,
+    "displayName": "チャプター1、シーズン1",
+    "startDate": "2017-10-24 09:00:00+00:00",
+    "endDate": "2017-12-14 08:59:59+00:00"
+  },
+  {
+    "season": 2,
+    "chapter": 1,
+    "seasonInChapter": 2,
+    "displayName": "チャプター1、シーズン2",
+    "startDate": "2017-12-14 09:00:00+00:00",
+    "endDate": "2018-02-22 08:59:59+00:00"
+  },
+  {
+    "season": 3,
+    "chapter": 1,
+    "seasonInChapter": 3,
+    "displayName": "チャプター1、シーズン3",
+    "startDate": "2018-02-22 09:00:00+00:00",
+    "endDate": "2018-05-01 08:59:59+00:00"
+  },
+  {
+    "season": 4,
+    "chapter": 1,
+    "seasonInChapter": 4,
+    "displayName": "チャプター1、シーズン4",
+    "startDate": "2018-05-01 09:00:00+00:00",
+    "endDate": "2018-07-11 08:59:59+00:00"
+  },
+  {
+    "season": 5,
+    "chapter": 1,
+    "seasonInChapter": 5,
+    "displayName": "チャプター1、シーズン5",
+    "startDate": "2018-07-11 09:00:00+00:00",
+    "endDate": "2018-09-27 08:59:59+00:00"
+  },
+  {
+    "season": 6,
+    "chapter": 1,
+    "seasonInChapter": 6,
+    "displayName": "チャプター1、シーズン6",
+    "startDate": "2018-09-27 09:00:00+00:00",
+    "endDate": "2018-12-06 08:59:59+00:00"
+  },
+  {
+    "season": 7,
+    "chapter": 1,
+    "seasonInChapter": 7,
+    "displayName": "チャプター1、シーズン7",
+    "startDate": "2018-12-06 09:00:00+00:00",
+    "endDate": "2019-02-28 07:59:59+00:00"
+  },
+  {
+    "season": 8,
+    "chapter": 1,
+    "seasonInChapter": 8,
+    "displayName": "チャプター1、シーズン8",
+    "startDate": "2019-02-28 08:00:00+00:00",
+    "endDate": "2019-05-09 07:59:59+00:00"
+  },
+  {
+    "season": 9,
+    "chapter": 1,
+    "seasonInChapter": 9,
+    "displayName": "チャプター1、シーズン9",
+    "startDate": "2019-05-09 08:00:00+00:00",
+    "endDate": "2019-08-01 07:59:59+00:00"
+  },
+  {
+    "season": 10,
+    "chapter": 1,
+    "seasonInChapter": 10,
+    "displayName": "チャプター1、シーズンX",
+    "startDate": "2019-08-01 08:00:00+00:00",
+    "endDate": "2019-10-13 18:00:00+00:00"
+  },
+  {
+    "season": 11,
+    "chapter": 2,
+    "seasonInChapter": 1,
+    "displayName": "チャプター2、シーズン1",
+    "startDate": "2019-10-15 08:00:00+00:00",
+    "endDate": "2020-02-20 08:59:59+00:00"
+  },
+  {
+    "season": 12,
+    "chapter": 2,
+    "seasonInChapter": 2,
+    "displayName": "チャプター2、シーズン2",
+    "startDate": "2020-02-20 09:00:00+00:00",
+    "endDate": "2020-06-17 05:59:59+00:00"
+  },
+  {
+    "season": 13,
+    "chapter": 2,
+    "seasonInChapter": 3,
+    "displayName": "チャプター2、シーズン3",
+    "startDate": "2020-06-17 06:00:00+00:00",
+    "endDate": "2020-08-27 05:59:59+00:00"
+  },
+  {
+    "season": 14,
+    "chapter": 2,
+    "seasonInChapter": 4,
+    "displayName": "チャプター2、シーズン4",
+    "startDate": "2020-08-27 06:00:00+00:00",
+    "endDate": "2020-12-02 04:59:59+00:00"
+  },
+  {
+    "season": 15,
+    "chapter": 2,
+    "seasonInChapter": 5,
+    "displayName": "チャプター2、シーズン5",
+    "startDate": "2020-12-02 05:00:00+00:00",
+    "endDate": "2021-03-16 03:59:59+00:00"
+  },
+  {
+    "season": 16,
+    "chapter": 2,
+    "seasonInChapter": 6,
+    "displayName": "チャプター2、シーズン6",
+    "startDate": "2021-03-16 04:00:00+00:00",
+    "endDate": "2021-06-08 05:59:59+00:00"
+  },
+  {
+    "season": 17,
+    "chapter": 2,
+    "seasonInChapter": 7,
+    "displayName": "チャプター2、シーズン7",
+    "startDate": "2021-06-08 06:00:00+00:00",
+    "endDate": "2021-09-13 05:59:59+00:00"
+  },
+  {
+    "season": 18,
+    "chapter": 2,
+    "seasonInChapter": 8,
+    "displayName": "チャプター2、シーズン8",
+    "startDate": "2021-09-13 06:00:00+00:00",
+    "endDate": "2021-12-04 21:15:00+00:00"
+  },
+  {
+    "season": 19,
+    "chapter": 3,
+    "seasonInChapter": 1,
+    "displayName": "チャプター3、シーズン1",
+    "startDate": "2021-12-05 15:00:00+00:00",
+    "endDate": "2022-03-20 06:59:59+00:00"
+  },
+  {
+    "season": 20,
+    "chapter": 3,
+    "seasonInChapter": 2,
+    "displayName": "チャプター3、シーズン2",
+    "startDate": "2022-03-20 07:00:00+00:00",
+    "endDate": "2022-06-05 06:59:59+00:00"
+  },
+  {
+    "season": 21,
+    "chapter": 3,
+    "seasonInChapter": 3,
+    "displayName": "チャプター3、シーズン3",
+    "startDate": "2022-06-05 07:00:00+00:00",
+    "endDate": "2022-09-18 05:59:59+00:00"
+  },
+  {
+    "season": 22,
+    "chapter": 3,
+    "seasonInChapter": 4,
+    "displayName": "チャプター3、シーズン4",
+    "startDate": "2022-09-18 06:00:00+00:00",
+    "endDate": "2022-12-03 22:30:00+00:00"
+  },
+  {
+    "season": 23,
+    "chapter": 4,
+    "seasonInChapter": 1,
+    "displayName": "チャプター4、シーズン1",
+    "startDate": "2022-12-04 08:00:00+00:00",
+    "endDate": "2023-03-10 05:59:59+00:00"
+  },
+  {
+    "season": 24,
+    "chapter": 4,
+    "seasonInChapter": 2,
+    "displayName": "チャプター4、シーズン2",
+    "startDate": "2023-03-10 06:00:00+00:00",
+    "endDate": "2023-06-09 05:59:59+00:00"
+  },
+  {
+    "season": 25,
+    "chapter": 4,
+    "seasonInChapter": 3,
+    "displayName": "チャプター4、シーズン3",
+    "startDate": "2023-06-09 06:00:00+00:00",
+    "endDate": "2023-08-25 05:59:59+00:00"
+  },
+  {
+    "season": 26,
+    "chapter": 4,
+    "seasonInChapter": 4,
+    "displayName": "チャプター4、シーズン4",
+    "startDate": "2023-08-25 06:00:00+00:00",
+    "endDate": "2023-11-03 05:59:59+00:00"
+  },
+  {
+    "season": 27,
+    "chapter": 4,
+    "seasonInChapter": 5,
+    "displayName": "フォートナイト ORIGIN",
+    "startDate": "2023-11-03 06:00:00+00:00",
+    "endDate": "2023-12-03 05:59:59+00:00"
+  },
+  {
+    "season": 28,
+    "chapter": 5,
+    "seasonInChapter": 1,
+    "displayName": "チャプター5、シーズン1",
+    "startDate": "2023-12-03 06:00:00+00:00",
+    "endDate": "2024-03-08 05:59:59+00:00"
+  },
+  {
+    "season": 29,
+    "chapter": 5,
+    "seasonInChapter": 2,
+    "displayName": "チャプター5、シーズン2",
+    "startDate": "2024-03-08 06:00:00+00:00",
+    "endDate": "2024-05-24 05:59:59+00:00"
+  },
+  {
+    "season": 30,
+    "chapter": 5,
+    "seasonInChapter": 3,
+    "displayName": "チャプター5、シーズン3",
+    "startDate": "2024-05-24 06:00:00+00:00",
+    "endDate": "2024-08-16 05:59:59+00:00"
+  },
+  {
+    "season": 31,
+    "chapter": 5,
+    "seasonInChapter": 4,
+    "displayName": "チャプター5、シーズン4",
+    "startDate": "2024-08-16 06:00:00+00:00",
+    "endDate": "2024-11-02 05:59:59+00:00"
+  },
+  {
+    "season": 32,
+    "chapter": 5,
+    "seasonInChapter": 5,
+    "displayName": "フォートナイト: リミックス",
+    "startDate": "2024-11-02 06:00:00+00:00",
+    "endDate": "2024-12-01 05:59:59+00:00"
+  },
+  {
+    "season": 33,
+    "chapter": 6,
+    "seasonInChapter": 1,
+    "displayName": "チャプター6、シーズン1",
+    "startDate": "2024-12-01 06:00:00+00:00",
+    "endDate": "2025-02-21 05:59:59+00:00"
+  },
+  {
+    "season": 34,
+    "chapter": 6,
+    "seasonInChapter": 2,
+    "displayName": "チャプター6、シーズン2",
+    "startDate": "2025-02-21 06:00:00+00:00",
+    "endDate": null
+  }
+]

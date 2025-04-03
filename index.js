@@ -40,7 +40,7 @@ app.get('/api/profile/:epicId', async (req, res) => {
                 return res.status(404).json({ error: 'Failed to fetch data' });
             }
             // 本番用にoutputデータを組み立て
-            const output = processPowerRankData(data);
+            const output = await processPowerRankData(data);
             res.json(output);
         } catch (error) {
             console.error('Error while processing Epic ID:', error);
@@ -73,7 +73,7 @@ async function processEpicId(epicId, retryCount = 3) { // retryCount は最大�
 
         const url2 = `https://fortnitetracker.com/profile/search?q=${epicId}`;
         await page2.goto(url2, { waitUntil: 'domcontentloaded' });
-        await sleep(12000);
+        await sleep(6000);
 
         const html2 = await page2.content();
 
@@ -84,7 +84,7 @@ async function processEpicId(epicId, retryCount = 3) { // retryCount は最大�
         } else {
             await page2.goto(url1, { waitUntil: 'domcontentloaded' });
 
-            await sleep(12000);
+            await sleep(6000);
             const html3 = await page2.content();
 
             if (!html3.includes('404 Not Found.')) {
@@ -122,11 +122,12 @@ async function setupBrowser() {
 }
 
 // powerRankDataを基にoutputを作成
-function processPowerRankData(data) {
+async function processPowerRankData(data) {
     const output = {
+        currentSeason: data.currentSeason,
+        EpicId: data.platformInfo.platformUserHandle,
+        accountId: data.powerRank.accountId,
         powerRanking: {
-            EpicId: data.platformInfo.platformUserHandle,
-            accountId: data.powerRank.accountId,
             region: data.powerRank.region,
             platform: data.powerRank.platform,
             statRank: data.powerRank.statRank,
@@ -140,10 +141,10 @@ function processPowerRankData(data) {
             events: data.powerRank.events,
             lastUpdated: data.powerRank.lastUpdated,
         },
-        currentSeason: data.currentSeason,
         eventRegion: data.eventRegion,
         eventPlatform: data.eventPlatform,
         seasonsPR: {},
+        seasonsData: await seasons(data.currentSeason),
     };
 
     // myEvent配列の各イベントに対して処理を行う
@@ -181,6 +182,45 @@ function processPowerRankData(data) {
     });
 
     return output;
+}
+
+async function seasons(currentSeason) {
+    const url = "https://fortniteapi.io/v1/seasons/list?lang=ja";
+
+    let seasonsData = null;
+    if (fs.existsSync('./seasons.json')) {
+        try {
+            seasonsData = JSON.parse(fs.readFileSync('./seasons.json'));
+        } catch (error) {
+            console.error('seasons.json の解析に失敗しました:', error);
+        }
+    }
+    const lastSeason = (seasonsData && Array.isArray(seasonsData.seasons) && seasonsData.seasons.length > 0)
+        ? seasonsData.seasons[seasonsData.seasons.length - 1]
+        : null;
+
+    if (lastSeason && lastSeason.season === currentSeason) {
+        return seasonsData.seasons.map(season => {
+            const { patchList, ...seasonWithoutPatchList } = season;
+            return seasonWithoutPatchList;
+        });
+    }
+
+    const response = await fetch(url, {
+        headers: {
+            Authorization: process.env.FORTNITE_API_KEY,
+        }
+    });
+
+    const data = await response.json();
+
+    const seasonsWithoutPatchList = data.seasons.map(season => {
+        const { patchList, ...seasonWithoutPatchList } = season;
+        return seasonWithoutPatchList;
+    });
+
+    fs.writeFileSync('./seasons.json', JSON.stringify(data, null, 2));
+    return seasonsWithoutPatchList;
 }
 
 function sleep(ms) {
