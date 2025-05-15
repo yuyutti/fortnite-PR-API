@@ -1,12 +1,49 @@
-# fortnite-RP-API
+# Fortnite RP API
 
-## POST /api/user
+## 概要
 
-header  
-Content-Type : application/x-www-form-urlencoded  
+このAPIは、指定された **Epic ID** のFortniteプレイヤーのPR大会、すなわちPower Ranking対象大会の結果を取得するものです。
+ヘッドレスブラウザを使用して [Fortnite Tracker](https://fortnitetracker.com/) にアクセスし、ウェブスクレイピングを行い、データを取得します。
 
-body  
-url: TorackerURL  
+---
 
-https://fortnitetracker.com/profile/kbm/{EpicID}/events?region=ASIA  
-ほかのサーバーのPRを取得したい場合はregionを変える
+## エンドポイント
+
+### `GET /api/profile/:epicId`
+
+**パラメータ:**
+
+* `:epicId` – Epic Games のユーザーID（プレイヤー名）
+
+**レスポンス例:**
+
+![image](https://github.com/user-attachments/assets/d1f5915e-b43a-4e3a-8101-7d2fa8c260ee)
+![image](https://github.com/user-attachments/assets/7bb30869-1214-4b2c-980f-4fc06323a2c4)
+
+※ **PR【Power Ranking】対象外の大会は返されません。**
+
+---
+
+## 環境
+
+* Node.js v22.13.1
+* npm v10.4.0
+* `.env` に `FORTNITE_API_KEY` を設定する必要があります（`fortniteapi.io` のAPIキー）
+
+---
+
+## 注意事項
+
+* レスポンスはウェブスクレイピングに依存するため、**取得に時間がかかる**場合があります。
+* Fortnite Tracker の仕様変更などにより、突然動作しなくなる可能性があります。
+* スクレイピングに伴うリスク（ブロック・法的問題など）を理解し、**使用は自己責任でお願いします**。
+* 何か問題が発生しても、**一切責任は負いません。**
+
+---
+
+## ライセンス
+
+MITライセンス。
+MITはOSS（オープンソースソフトウェア）でよく使用されるライセンスの一つで、\*\*「無保証・自由利用・著作権表示の維持」\*\*を条件に、ソフトウェアの利用、複製、改変、再配布を許可するものです。
+
+> このプロジェクトはMITライセンスのもとで公開されていますが、**責任は取りません。**
