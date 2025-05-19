@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+require('dotenv').config();
 
 const fs = require('fs');
 
@@ -30,17 +31,19 @@ async function processQueue() {
 
 app.get('/api/profile/:epicId', async (req, res) => {
     const epicId = req.params.epicId;
+    const id = req.query.id;
     if (!epicId) return res.status(404).send('Epic ID not found');
 
     taskQueue.push(async () => {
-        console.log('Processing Epic ID:', epicId);
+        console.log(`リクエストの処理を開始します: ${epicId}`);
         try {
-            const data = await processEpicId(epicId);
+            const data = await processEpicId(epicId, id);
             if (!data) {
                 return res.status(404).json({ error: 'Failed to fetch data' });
             }
             // 本番用にoutputデータを組み立て
             const output = await processPowerRankData(data);
+            console.log(`リクエストの処理が完了しました: ${epicId}`);
             res.json(output);
         } catch (error) {
             console.error('Error while processing Epic ID:', error);
@@ -51,61 +54,74 @@ app.get('/api/profile/:epicId', async (req, res) => {
     processQueue(); // キューを処理
 });
 
-async function processEpicId(epicId, retryCount = 3) { // retryCount は最大再試行回数
+async function processEpicId(epicId, id, retryCount = 3) {
     try {
         const url1 = `https://fortnitetracker.com/profile/kbm/${epicId}/events?competitive=pr&region=ASIA`;
-        const { page, browser } = BROWSER;
-
+        console.log(`${url1}にaccessしています...`);
+        const { browser } = BROWSER;
         const page2 = await browser.newPage();
         await page2.goto(url1, { waitUntil: 'domcontentloaded' });
-
         await sleep(5000);
         const html1 = await page2.content();
+        console.log(`${url1}にaccessしました`);
 
         if (!html1.includes('404 Not Found.')) {
-            console.log(`Found profile for ${epicId}:`);
+            console.log(`${url1}のデータを取得しました`);
             const scriptRegex = /const profile = (\{[\s\S]*?"powerRank":\s*(\{[\s\S]*?\})[\s\S]*?\});/m;
             const match = scriptRegex.exec(html1);
+            console.log(`${url1}のデータを取得しました`);
             const powerRankData = JSON.parse(match[1]);
+            console.log(`${url1}のデータ解析が完了しました`);
             await page2.close();
-            return powerRankData || null;
+            return powerRankData;
         }
-
-        const url2 = `https://fortnitetracker.com/profile/search?q=${epicId}`;
+        console.log(`${url1}に404エラーが発生しました`);
+    
+        const url2 = `https://fortnitetracker.com/profile/search?q=${id}`;
+        console.log(`${url2}にaccessします`);
         await page2.goto(url2, { waitUntil: 'domcontentloaded' });
         await sleep(6000);
-
         const html2 = await page2.content();
+        console.log(`${url2}にaccessしました`);
 
         if (html2.includes('404 Not Found.')) {
+            console.log(`${url2}に404エラーが発生しました\n処理を終了します`);
             console.log(`Profile not found for ${epicId}.`);
             await page2.close();
             return null;
-        } else {
-            await page2.goto(url1, { waitUntil: 'domcontentloaded' });
-
-            await sleep(6000);
-            const html3 = await page2.content();
-
-            if (!html3.includes('404 Not Found.')) {
-                console.log(`Found profile for ${epicId}:`);
-                const scriptRegex = /const profile = (\{[\s\S]*?"powerRank":\s*(\{[\s\S]*?\})[\s\S]*?\});/m;
-                const match = scriptRegex.exec(html3);
-                const powerRankData = JSON.parse(match[1]);
-                await page2.close();
-                return powerRankData || null;
-            }
-
-            console.log(`Profile not found for ${epicId} after retry.`);
-            await page2.close();
-            return null;
         }
+
+        console.log(`${url2}のデータを取得しました`);
+        const fixedEpicId = await page2.$eval('.profile-header-user__nickname', el => el.textContent.trim());
+        console.log(`${url2}のデータを取得しました: ${fixedEpicId}`);
+
+        const url3 = `https://fortnitetracker.com/profile/kbm/${fixedEpicId}/events?competitive=pr&region=ASIA`;
+        console.log(`${url3}にaccessします`);
+        await page2.goto(url3, { waitUntil: 'domcontentloaded' });
+        await sleep(6000);
+        const html3 = await page2.content();
+        console.log(`${url3}にaccessしました`);
+
+        if (!html3.includes('404 Not Found.')) {
+            console.log(`${url3}のデータを取得しました`);
+            const scriptRegex = /const profile = (\{[\s\S]*?"powerRank":\s*(\{[\s\S]*?\})[\s\S]*?\});/m;
+            const match = scriptRegex.exec(html3);
+            console.log(`${url3}のデータを取得しました`);
+            const powerRankData = JSON.parse(match[1]);
+            console.log(`${url3}のデータ解析が完了しました`);
+            await page2.close();
+            return powerRankData;
+        }
+
+        console.log(`${url3}に404エラーが発生しました\n処理を終了します`);
+        await page2.close();
+        return null;
     } catch (error) {
         console.error(`Error processing Epic ID ${epicId}:`, error);
 
         if (retryCount > 0) {
-            console.log(`Retrying ${epicId}... (${3 - retryCount} attempts remaining)`);
-            return await processEpicId(epicId, retryCount - 1); // 再帰的にリトライ
+            console.log(`Retrying ${epicId}... (残り ${retryCount - 1} 回)`);
+            return await processEpicId(epicId, id, retryCount - 1);
         }
 
         console.error(`Max retries reached for ${epicId}. Could not fetch the data.`);

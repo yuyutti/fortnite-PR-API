@@ -1282,13 +1282,60 @@
       "seasonInChapter": 2,
       "displayName": "チャプター6、シーズン2",
       "startDate": "2025-02-21 06:00:00+00:00",
-      "endDate": null,
+      "endDate": "2025-05-02 05:59:59+00:00",
       "patchList": [
         {
           "version": "34.00",
           "date": "2025-02-21"
+        },
+        {
+          "version": "34.10",
+          "date": "2025-03-11"
+        },
+        {
+          "version": "34.20",
+          "date": "2025-03-25"
+        },
+        {
+          "version": "34.21",
+          "date": "2025-04-01"
+        },
+        {
+          "version": "34.30",
+          "date": "2025-04-08"
+        },
+        {
+          "version": "34.40",
+          "date": "2025-04-22"
         }
       ]
+    },
+    {
+      "season": 35,
+      "chapter": 6,
+      "seasonInChapter": 3,
+      "displayName": "チャプター6、シーズン3",
+      "startDate": "2025-05-02 06:00:00+00:00",
+      "endDate": "2025-06-08 05:59:59+00:00",
+      "patchList": [
+        {
+          "version": "35.00",
+          "date": "2025-05-02"
+        },
+        {
+          "version": "35.10",
+          "date": "2025-05-16"
+        }
+      ]
+    },
+    {
+      "season": 36,
+      "chapter": 6,
+      "seasonInChapter": 4,
+      "displayName": "チャプター6、シーズン4",
+      "startDate": "2025-06-08 06:00:00+00:00",
+      "endDate": null,
+      "patchList": []
     }
   ]
 }
