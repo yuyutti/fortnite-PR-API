@@ -6,27 +6,114 @@ require('dotenv').config();
 
 const fs = require('fs');
 
-let BROWSER;
-const taskQueue = [];
+class PagePool {
+    constructor(browser, poolSize = 5, idleTimeout = 5 * 60 * 1000) {
+        this.browser = browser;
+        this.poolSize = poolSize;
+        this.idleTimeout = idleTimeout;
+        this.pool = [];
+        this.available = [];
+        this.waiters = [];
 
-const maxConcurrentTasks = 5; // 最大同時処理数
-let currentConcurrentTasks = 0;
+        // ブラウザがクラッシュした時などのイベント
+        this.browser.on('disconnected', () => {
+            console.error('Browser disconnected. Clearing all pages.');
+            this.pool.forEach(page => page.close().catch(() => {}));
+            this.pool = [];
+            this.available = [];
+            this.waiters.forEach(resolve => resolve(this._recreatePage()));
+            this.waiters = [];
+        });
+    }
+
+    async _recreatePage() {
+        const page = await this.browser.newPage();
+        this.pool.push(page);
+        this._attachPageErrorHandler(page);
+        return page;
+    }
+
+    _attachPageErrorHandler(page) {
+        page.on('error', error => {
+            console.error(`Page error: ${error.message}. Removing page from pool.`);
+            this._removePage(page);
+        });
+        page.on('close', () => {
+            console.warn('Page closed unexpectedly. Removing from pool.');
+            this._removePage(page);
+        });
+    }
+
+    _removePage(page) {
+        const idxPool = this.pool.indexOf(page);
+        if (idxPool >= 0) this.pool.splice(idxPool, 1);
+        const idxAvail = this.available.findIndex(info => info.page === page);
+        if (idxAvail >= 0) {
+            clearTimeout(this.available[idxAvail].timer);
+            this.available.splice(idxAvail, 1);
+        }
+    }
+
+    async getPage() {
+        // 利用可能なページがあれば再利用
+        while (this.available.length > 0) {
+            const info = this.available.shift();
+            clearTimeout(info.timer);
+            if (info.page.isClosed()) continue;
+            return info.page;
+        }
+        // プールに余裕があれば新規作成
+        if (this.pool.length < this.poolSize) {
+            const page = await this.browser.newPage();
+            this.pool.push(page);
+            this._attachPageErrorHandler(page);
+            return page;
+        }
+        // 空き待ちキューに入る
+        return new Promise(resolve => this.waiters.push(resolve));
+    }
+
+    releasePage(page) {
+        if (page.isClosed()) return;
+        // 待ちがあればすぐ渡す
+        if (this.waiters.length > 0) {
+            const resolve = this.waiters.shift();
+            resolve(page);
+            return;
+        }
+        // アイドルタイマーをセットして保持
+        const timer = setTimeout(async () => {
+            try { await page.close(); }
+            catch (e) { console.error('Failed to close idle page:', e); }
+            this._removePage(page);
+        }, this.idleTimeout);
+        this.available.push({ page, timer });
+    }
+}
+
+let BROWSER;
+let pagePool;
+
+async function setupBrowser() {
+    const { connect } = await import('puppeteer-real-browser');
+    const connection = await connect({ tf: true, turnstile: true, fingerprint: true, headless: 'auto', connectOption: { defaultViewport: null } });
+    const { page, browser } = connection;
+    await page.goto('https://google.com');
+    BROWSER = { page, browser };
+    pagePool = new PagePool(browser, 5, 5 * 60 * 1000);
+}
+
+// タスクキュー制御
+const taskQueue = [];
+let activeTasks = 0;
 
 async function processQueue() {
-    if (taskQueue.length === 0 || currentConcurrentTasks >= maxConcurrentTasks) return;
-
-    // キューにタスクがあれば、並列処理を始める
+    if (taskQueue.length === 0 || activeTasks >= pagePool.poolSize) return;
     const task = taskQueue.shift();
-    currentConcurrentTasks++;
-
-    try {
-        await task();
-    } catch (error) {
-        console.error('Error processing task:', error);
-    } finally {
-        currentConcurrentTasks--;
-        processQueue(); // 次のタスクを処理
-    }
+    activeTasks++;
+    try { await task(); } catch (e) { console.error(e); }
+    activeTasks--;
+    processQueue();
 }
 
 app.get('/api/profile/:epicId', async (req, res) => {
@@ -38,10 +125,7 @@ app.get('/api/profile/:epicId', async (req, res) => {
         console.log(`リクエストの処理を開始します: ${epicId}`);
         try {
             const data = await processEpicId(epicId, id);
-            if (!data) {
-                return res.status(404).json({ error: 'Failed to fetch data' });
-            }
-            // 本番用にoutputデータを組み立て
+            if (!data) return res.status(404).json({ error: 'Failed to fetch data' });
             const output = await processPowerRankData(data);
             console.log(`リクエストの処理が完了しました: ${epicId}`);
             res.json(output);
@@ -50,92 +134,95 @@ app.get('/api/profile/:epicId', async (req, res) => {
             res.status(500).json({ error: `Error processing data EpicId: ${epicId}` });
         }
     });
-
-    processQueue(); // キューを処理
+    processQueue();
 });
 
-async function processEpicId(epicId, id, retryCount = 3) {
-    try {
-        const url1 = `https://fortnitetracker.com/profile/kbm/${epicId}/events?competitive=pr&region=ASIA`;
-        console.log(`${url1}にaccessしています...`);
-        const { browser } = BROWSER;
-        const page2 = await browser.newPage();
-        await page2.goto(url1, { waitUntil: 'domcontentloaded' });
-        await sleep(5000);
-        const html1 = await page2.content();
-        console.log(`${url1}にaccessしました`);
+    async function processEpicId(epicId, id, retryCount = 3) {
+        const page = await pagePool.getPage();
+        try {
+            // 共通のfetch関数
+            async function fetchContent(url, wait = true) {
+                console.log(`${url}にアクセスしています...`);
+                await page.goto(url, { waitUntil: 'domcontentloaded' });
+                let challenge = false;
+                if (wait) {
+                    try {
+                        await page.waitForFunction(
+                            () => document.body.innerText.includes('Verifying you are human.'),
+                            { timeout: 2000 }
+                        );
+                        challenge = true;
+                        console.log('Cloudflare チャレンジ検出！');
+                        await page.waitForFunction(
+                            () => document.body.innerText.includes('Verification successful'),
+                            { timeout: 6000 }
+                        );
+                        console.log('Verification successful になった！');
+                    } catch {
+                        console.log('チャレンジ不要やったみたいやな');
+                    }
+                }
+                if (challenge) {
+                    await page.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 5000 }).catch(() => {});
+                }
+                return page.content();
+            }
 
-        if (!html1.includes('404 Not Found.')) {
-            console.log(`${url1}のデータを取得しました`);
-            const scriptRegex = /const profile = (\{[\s\S]*?"powerRank":\s*(\{[\s\S]*?\})[\s\S]*?\});/m;
-            const match = scriptRegex.exec(html1);
-            console.log(`${url1}のデータを取得しました`);
-            const powerRankData = JSON.parse(match[1]);
-            console.log(`${url1}のデータ解析が完了しました`);
-            await page2.close();
-            return powerRankData;
+            // 1. 直接取得
+            const url1 = `https://fortnitetracker.com/profile/kbm/${epicId}/events?competitive=pr&region=ASIA`;
+            const html1 = await fetchContent(url1);
+            if (!html1.includes('404 Not Found.')) {
+                return parsePowerRank(html1, url1);
+            }
+            console.log(`${url1}に404エラーが発生しました`);
+
+            // 2. 検索ページでID修正
+            const url2 = `https://fortnitetracker.com/profile/search?q=${id}`;
+            const html2 = await fetchContent(url2, false);
+            console.log(`${url2}にアクセスしました`);
+            if (html2.includes('404 Not Found.')) {
+                console.log(`${url2}に404エラーが発生しました\n処理を終了します`);
+                return null;
+            }
+            console.log(`${url2}のデータを取得しました`);
+            const fixedEpicId = await page.$eval('.profile-header-user__nickname', el => el.textContent.trim());
+            console.log(`${url2}のIDを取得しました: ${fixedEpicId}`);
+
+            // 3. 修正IDで再取得
+            const url3 = `https://fortnitetracker.com/profile/kbm/${fixedEpicId}/events?competitive=pr&region=ASIA`;
+            const html3 = await fetchContent(url3);
+            if (!html3.includes('404 Not Found.')) {
+                return parsePowerRank(html3, url3);
+            }
+            console.log(`${url3}に404エラーが発生しました\n処理を終了します`);
+            return null;
+
+        } catch (error) {
+            console.error(`Error processing Epic ID ${epicId}:`, error);
+            if (retryCount > 0) {
+                console.log(`Retrying ${epicId}... (残り ${retryCount - 1} 回)`);
+                return await processEpicId(epicId, id, retryCount - 1);
+            }
+            console.error(`Max retries reached for ${epicId}. Could not fetch the data.`);
+            return null;
+        } finally {
+            pagePool.releasePage(page);
         }
-        console.log(`${url1}に404エラーが発生しました`);
-    
-        const url2 = `https://fortnitetracker.com/profile/search?q=${id}`;
-        console.log(`${url2}にaccessします`);
-        await page2.goto(url2, { waitUntil: 'domcontentloaded' });
-        await sleep(6000);
-        const html2 = await page2.content();
-        console.log(`${url2}にaccessしました`);
+    }
 
-        if (html2.includes('404 Not Found.')) {
-            console.log(`${url2}に404エラーが発生しました\n処理を終了します`);
-            console.log(`Profile not found for ${epicId}.`);
-            await page2.close();
+    // プロファイルデータを抽出する共通関数
+    function parsePowerRank(html, url) {
+        console.log(`${url}のコンテンツにaccessしました`);
+        const scriptRegex = /const profile = (\{[\s\S]*?"powerRank":\s*(\{[\s\S]*?\})[\s\S]*?\});/m;
+        const match = scriptRegex.exec(html);
+        if (!match) {
+            console.log(`${url}からデータをパースできませんでした`);
             return null;
         }
-
-        console.log(`${url2}のデータを取得しました`);
-        const fixedEpicId = await page2.$eval('.profile-header-user__nickname', el => el.textContent.trim());
-        console.log(`${url2}のデータを取得しました: ${fixedEpicId}`);
-
-        const url3 = `https://fortnitetracker.com/profile/kbm/${fixedEpicId}/events?competitive=pr&region=ASIA`;
-        console.log(`${url3}にaccessします`);
-        await page2.goto(url3, { waitUntil: 'domcontentloaded' });
-        await sleep(6000);
-        const html3 = await page2.content();
-        console.log(`${url3}にaccessしました`);
-
-        if (!html3.includes('404 Not Found.')) {
-            console.log(`${url3}のデータを取得しました`);
-            const scriptRegex = /const profile = (\{[\s\S]*?"powerRank":\s*(\{[\s\S]*?\})[\s\S]*?\});/m;
-            const match = scriptRegex.exec(html3);
-            console.log(`${url3}のデータを取得しました`);
-            const powerRankData = JSON.parse(match[1]);
-            console.log(`${url3}のデータ解析が完了しました`);
-            await page2.close();
-            return powerRankData;
-        }
-
-        console.log(`${url3}に404エラーが発生しました\n処理を終了します`);
-        await page2.close();
-        return null;
-    } catch (error) {
-        console.error(`Error processing Epic ID ${epicId}:`, error);
-
-        if (retryCount > 0) {
-            console.log(`Retrying ${epicId}... (残り ${retryCount - 1} 回)`);
-            return await processEpicId(epicId, id, retryCount - 1);
-        }
-
-        console.error(`Max retries reached for ${epicId}. Could not fetch the data.`);
-        return null;
+        const data = JSON.parse(match[1]);
+        console.log(`${url}のデータ解析が完了しました`);
+        return data;
     }
-}
-
-async function setupBrowser() {
-    const { connect } = await import('puppeteer-real-browser');
-    const connection = await connect({ tf: true, turnstile: true, fingerprint: true, headless: 'auto', connectOption: { defaultViewport: null } });
-    const { page, browser } = connection;
-    await page.goto('https://google.com');
-    BROWSER = { page, browser };
-}
 
 // powerRankDataを基にoutputを作成
 async function processPowerRankData(data) {
@@ -237,10 +324,6 @@ async function seasons(currentSeason) {
 
     fs.writeFileSync('./seasons.json', JSON.stringify(data, null, 2));
     return seasonsWithoutPatchList;
-}
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 (async () => {
