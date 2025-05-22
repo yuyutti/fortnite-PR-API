@@ -154,7 +154,8 @@ app.get('/api/profile/:epicId', async (req, res) => {
 
                         try {
                             await page.waitForFunction(() =>
-                                document.body.innerText.includes('Verification successful' || '検証成功'),
+                                document.body.innerText.includes('Verification successful') ||
+                                document.body.innerText.includes('検証成功'),
                                 { timeout: 8000 }
                             );
                             logWithTime('Verification successful になった！');
