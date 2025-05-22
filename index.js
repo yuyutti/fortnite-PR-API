@@ -148,13 +148,13 @@ app.get('/api/profile/:epicId', async (req, res) => {
                 if (wait) {
                     // チャレンジ文があれば即true、なければスキップ
                     const bodyText = await page.evaluate(() => document.body.innerText);
-                    if (bodyText.includes('Verifying you are human.')) {
+                    if (bodyText.includes('Verifying you are human.') || bodyText.includes('あなたが人間であることを確認します。これには数秒かかる場合があります。')) {
                         challenge = true;
                         logWithTime('Cloudflare チャレンジ検出！');
 
                         try {
                             await page.waitForFunction(() =>
-                                document.body.innerText.includes('Verification successful'),
+                                document.body.innerText.includes('Verification successful' || '検証成功'),
                                 { timeout: 8000 }
                             );
                             logWithTime('Verification successful になった！');
