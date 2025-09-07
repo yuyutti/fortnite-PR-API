@@ -1,8 +1,8 @@
 {
   "dependencies": {
     "dotenv": "^16.4.7",
-    "express": "^4.19.2",
-    "puppeteer": "^24.7.1",
-    "puppeteer-real-browser": "^1.4.2"
+    "express": "^4.21.2",
+    "puppeteer": "^24.19.0",
+    "puppeteer-real-browser": "^1.4.4"
   }
 }
