@@ -305,39 +305,63 @@ async function seasons(currentSeason) {
     const url = "https://fortniteapi.io/v1/seasons/list?lang=ja";
 
     let seasonsData = null;
-    if (fs.existsSync('./seasons.json')) {
+
+    // キャッシュを読む
+    if (fs.existsSync("./seasons.json")) {
         try {
-            seasonsData = JSON.parse(fs.readFileSync('./seasons.json'));
+            seasonsData = JSON.parse(fs.readFileSync("./seasons.json", "utf-8"));
         } catch (error) {
-            console.error('seasons.json の解析に失敗しました:', error);
+            console.error("seasons.json の解析に失敗しました:", error);
         }
     }
-    // const lastSeason = (seasonsData && Array.isArray(seasonsData.seasons) && seasonsData.seasons.length > 0)
-    //     ? seasonsData.seasons[seasonsData.seasons.length - 1]
-    //     : null;
 
-    // if (lastSeason && lastSeason.season === currentSeason) {
-    //     return seasonsData.seasons.map(season => {
-    //         const { patchList, ...seasonWithoutPatchList } = season;
-    //         return seasonWithoutPatchList;
-    //     });
-    // }
+    const lastSeason =
+        (seasonsData &&
+            Array.isArray(seasonsData.seasons) &&
+            seasonsData.seasons.length > 0)
+            ? seasonsData.seasons[seasonsData.seasons.length - 1]
+            : null;
 
-    // const response = await fetch(url, {
-    //     headers: {
-    //         Authorization: process.env.FORTNITE_API_KEY,
-    //     }
-    // });
-    // console.log(`Fetching seasons data from ${url}, Status: ${response.status}`);
-    // const data = await response.json();
+    // キャッシュが最新シーズンならそれ返す
+    if (lastSeason && lastSeason.season === currentSeason) {
+        return seasonsData.seasons.map((season) => {
+            const { patchList, ...seasonWithoutPatchList } = season;
+            return seasonWithoutPatchList;
+        });
+    }
 
-    // const seasonsWithoutPatchList = data.seasons.map(season => {
-    //     const { patchList, ...seasonWithoutPatchList } = season;
-    //     return seasonWithoutPatchList;
-    // });
+    try {
+        const response = await fetch(url, {
+            headers: { Authorization: process.env.FORTNITE_API_KEY },
+        });
 
-    // fs.writeFileSync('./seasons.json', JSON.stringify(data, null, 2));
-    // return seasonsWithoutPatchList;
+        if (!response.ok) {
+            throw new Error(`APIリクエスト失敗: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        const seasonsWithoutPatchList = data.seasons.map((season) => {
+            const { patchList, ...seasonWithoutPatchList } = season;
+            return seasonWithoutPatchList;
+        });
+
+        fs.writeFileSync("./seasons.json", JSON.stringify(data, null, 2));
+        return seasonsWithoutPatchList;
+
+    } catch (error) {
+        console.error("API 取得に失敗したのでキャッシュを利用します:", error);
+
+        if (seasonsData && Array.isArray(seasonsData.seasons)) {
+            return seasonsData.seasons.map((season) => {
+                const { patchList, ...seasonWithoutPatchList } = season;
+                return seasonWithoutPatchList;
+            });
+        }
+
+        // キャッシュすら無かったら空配列返す
+        return [];
+    }
 }
 
 (async () => {
