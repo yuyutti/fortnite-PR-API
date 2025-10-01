@@ -312,32 +312,32 @@ async function seasons(currentSeason) {
             console.error('seasons.json の解析に失敗しました:', error);
         }
     }
-    const lastSeason = (seasonsData && Array.isArray(seasonsData.seasons) && seasonsData.seasons.length > 0)
-        ? seasonsData.seasons[seasonsData.seasons.length - 1]
-        : null;
+    // const lastSeason = (seasonsData && Array.isArray(seasonsData.seasons) && seasonsData.seasons.length > 0)
+    //     ? seasonsData.seasons[seasonsData.seasons.length - 1]
+    //     : null;
 
-    if (lastSeason && lastSeason.season === currentSeason) {
-        return seasonsData.seasons.map(season => {
-            const { patchList, ...seasonWithoutPatchList } = season;
-            return seasonWithoutPatchList;
-        });
-    }
+    // if (lastSeason && lastSeason.season === currentSeason) {
+    //     return seasonsData.seasons.map(season => {
+    //         const { patchList, ...seasonWithoutPatchList } = season;
+    //         return seasonWithoutPatchList;
+    //     });
+    // }
 
-    const response = await fetch(url, {
-        headers: {
-            Authorization: process.env.FORTNITE_API_KEY,
-        }
-    });
+    // const response = await fetch(url, {
+    //     headers: {
+    //         Authorization: process.env.FORTNITE_API_KEY,
+    //     }
+    // });
+    // console.log(`Fetching seasons data from ${url}, Status: ${response.status}`);
+    // const data = await response.json();
 
-    const data = await response.json();
+    // const seasonsWithoutPatchList = data.seasons.map(season => {
+    //     const { patchList, ...seasonWithoutPatchList } = season;
+    //     return seasonWithoutPatchList;
+    // });
 
-    const seasonsWithoutPatchList = data.seasons.map(season => {
-        const { patchList, ...seasonWithoutPatchList } = season;
-        return seasonWithoutPatchList;
-    });
-
-    fs.writeFileSync('./seasons.json', JSON.stringify(data, null, 2));
-    return seasonsWithoutPatchList;
+    // fs.writeFileSync('./seasons.json', JSON.stringify(data, null, 2));
+    // return seasonsWithoutPatchList;
 }
 
 (async () => {
