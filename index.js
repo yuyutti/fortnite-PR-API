@@ -215,7 +215,16 @@ async function processEpicId(epicId, id, retryCount = 3, startTime = Date.now())
         const url1 = `https://fortnitetracker.com/profile/kbm/${epicId}/events?region=ASIA`;
         const html1 = await fetchContent(url1);
         if (!html1.includes('404 Not Found.')) {
-            return parsePowerRank(html1, url1);
+            let data1 = parsePowerRank(html1, url1);
+            let retry = 0;
+            while (!data1 && retry < 3) {
+                retry++;
+                logWithTime(`${url1} のパース再試行中 (${retry}/3)...`);
+                await page.waitForTimeout(1500);
+                html1 = await page.content();
+                data1 = parsePowerRank(html1, url1);
+            }
+            if (data1) return data1;
         }
         logWithTime(`${url1}に404エラーが発生しました`);
 
@@ -235,7 +244,18 @@ async function processEpicId(epicId, id, retryCount = 3, startTime = Date.now())
         const url3 = `https://fortnitetracker.com/profile/kbm/${fixedEpicId}/events?competitive=pr&region=ASIA`;
         const html3 = await fetchContent(url3);
         if (!html3.includes('404 Not Found.')) {
-            return parsePowerRank(html3, url3);
+            let data3 = parsePowerRank(html3, url3);
+
+            let retry = 0;
+            while (!data3 && retry < 3) {
+                retry++;
+                logWithTime(`${url3} のパース再試行中 (${retry}/3)...`);
+                await page.waitForTimeout(1500);
+                html3 = await page.content();
+                data3 = parsePowerRank(html3, url3);
+            }
+
+            if (data3) return data3;
         }
         logWithTime(`${url3}に404エラーが発生しました\n処理を終了します`);
         return null;
