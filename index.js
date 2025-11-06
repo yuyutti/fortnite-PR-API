@@ -110,30 +110,34 @@ async function setupBrowser() {
     pagePool = new PagePool(browser, 1, 48 * 60 * 60 * 1000);
 }
 
-// タスクキュー制御
 const taskQueue = [];
 let activeTasks = 0;
+
+let processingPromise = Promise.resolve();
 let isProcessing = false;
 
-async function processQueue() {
-    if (isProcessing) return;
-    isProcessing = true;
-
-    while (taskQueue.length > 0 && activeTasks < pagePool.poolSize) {
-        const task = taskQueue.shift();
-        activeTasks++;
+function processQueue() {
+    processingPromise = processingPromise.then(async () => {
+        if (isProcessing) return;
+        isProcessing = true;
 
         try {
-            await task();
-        } catch (e) {
-            console.error(e);
+            while (taskQueue.length > 0 && activeTasks < pagePool.poolSize) {
+                const task = taskQueue.shift();
+                activeTasks++;
+                try {
+                    await task();
+                } catch (err) {
+                    console.error('Task error:', err);
+                } finally {
+                    activeTasks--;
+                }
+            }
         } finally {
-            activeTasks--;
+            isProcessing = false;
+            if (taskQueue.length > 0) processQueue();
         }
-    }
-
-    isProcessing = false;
-    if (taskQueue.length > 0) processQueue();
+    });
 }
 
 app.get('/api/profile/:epicId', async (req, res) => {
