@@ -113,29 +113,25 @@ async function setupBrowser() {
 const taskQueue = [];
 let activeTasks = 0;
 
-let processingPromise = Promise.resolve();
-let isProcessing = false;
+let queueLock = Promise.resolve();
 
 function processQueue() {
-    processingPromise = processingPromise.then(async () => {
-        if (isProcessing) return;
-        isProcessing = true;
+    queueLock = queueLock.then(async () => {
+        if (taskQueue.length === 0) return;
+
+        const task = taskQueue.shift();
+        activeTasks++;
 
         try {
-            while (taskQueue.length > 0 && activeTasks < pagePool.poolSize) {
-                const task = taskQueue.shift();
-                activeTasks++;
-                try {
-                    await task();
-                } catch (err) {
-                    console.error('Task error:', err);
-                } finally {
-                    activeTasks--;
-                }
-            }
+            await task();
+        } catch (err) {
+            console.error('Task error:', err);
         } finally {
-            isProcessing = false;
-            if (taskQueue.length > 0) processQueue();
+            activeTasks--;
+        }
+
+        if (taskQueue.length > 0) {
+            processQueue();
         }
     });
 }
