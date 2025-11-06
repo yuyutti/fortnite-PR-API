@@ -244,7 +244,6 @@ async function processEpicId(epicId, id, retryCount = 5, startTime = Date.now())
             logWithTime(`${url2}でEpic IDを取得できませんでした（要素未検出）`);
             return null;
         }
-        logWithTime(`${url2}のIDを取得しました: ${fixedEpicId}`);
 
         // 3. 修正IDで再取得
         const url3 = `https://fortnitetracker.com/profile/kbm/${encodeURIComponent(fixedEpicId)}/events?competitive=pr&region=ASIA`;
