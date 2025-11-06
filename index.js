@@ -168,7 +168,7 @@ async function processEpicId(epicId, id, retryCount = 3, startTime = Date.now())
             if (wait) {
                 // チャレンジ文があれば即true、なければスキップ
                 const bodyText = await page.evaluate(() => document.body.innerText);
-                if (/Verifying.*human|確認.*人間/i.test(bodyText)) {
+                if (/(Verifying.*human|ボットではないことを確認)/i.test(bodyText)) {
                     challenge = true;
                     logWithTime('Cloudflare チャレンジ検出！');
 
