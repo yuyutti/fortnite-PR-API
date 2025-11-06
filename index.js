@@ -7,7 +7,7 @@ require('dotenv').config();
 const fs = require('fs');
 
 class PagePool {
-    constructor(browser, poolSize = 5, idleTimeout = 5 * 60 * 1000) {
+    constructor(browser, poolSize = 5, idleTimeout = 48 * 60 * 60 * 1000) {
         this.browser = browser;
         this.poolSize = poolSize;
         this.idleTimeout = idleTimeout;
@@ -107,7 +107,7 @@ async function setupBrowser() {
     const { page, browser } = connection;
     await page.goto('https://google.com');
     BROWSER = { page, browser };
-    pagePool = new PagePool(browser, 1, 5 * 60 * 1000);
+    pagePool = new PagePool(browser, 1, 48 * 60 * 60 * 1000);
 }
 
 // タスクキュー制御
@@ -115,13 +115,18 @@ const taskQueue = [];
 let activeTasks = 0;
 
 async function processQueue() {
-    while (taskQueue.length > 0 && activeTasks < pagePool.poolSize) {
-        const task = taskQueue.shift();
-        activeTasks++;
-        task().finally(() => {
-            activeTasks--;
-            processQueue();
-        });
+    if (taskQueue.length === 0 || activeTasks >= pagePool.poolSize) return;
+
+    const task = taskQueue.shift();
+    activeTasks++;
+
+    try {
+        await task();
+    } catch (e) {
+        console.error(e);
+    } finally {
+        activeTasks--;
+        processQueue();
     }
 }
 
@@ -163,32 +168,20 @@ async function processEpicId(epicId, id, retryCount = 3, startTime = Date.now())
 
                     try {
                         const oldUrl = page.url();
-
-                        await Promise.race([
-                            page.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 20000 }),
-                            page.waitForFunction(old => location.href !== old, { timeout: 20000 }, oldUrl),
-                            page.waitForFunction(() => {
-                            const text = document.body.innerText;
-                            return !/Verifying.*human|確認.*人間/i.test(text);
-                            }, { timeout: 20000 }),
-                        ]);
-                        logWithTime('Verification successful になった！');
+                    await Promise.race([
+                        page.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 20000 }),
+                        page.waitForFunction(old => location.href !== old, { timeout: 20000 }, oldUrl),
+                    ]);
+                        logWithTime('Cloudflareリダイレクト検知 → 通過完了！');
                     } catch {
-                        logWithTime('Verification 成功の文字が出なかったけど、通過したかも？');
+                        logWithTime('CF通過検知失敗（けど多分通ってる）');
                     }
                 } else {
-                    logWithTime('チャレンジ不要やったみたいやな');
+                    logWithTime('Cloudflare チャレンジ不要だった！');
                 }
             }
 
-            // if (challenge) {
-            //     try {
-            //         await page.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 5000 });
-            //     } catch {
-            //         logWithTime('追加のナビゲーションはなかったみたいやな');
-            //     }
-            // }
-            if (challenge) await page.waitForTimeout(500);
+            if (challenge) await new Promise(r => setTimeout(r, 500));
             return page.content();
         }
 
@@ -212,15 +205,15 @@ async function processEpicId(epicId, id, retryCount = 3, startTime = Date.now())
         }
 
         // 1. 直接取得
-        const url1 = `https://fortnitetracker.com/profile/kbm/${epicId}/events?region=ASIA`;
-        const html1 = await fetchContent(url1);
+        const url1 = `https://fortnitetracker.com/profile/kbm/${encodeURIComponent(epicId)}/events?region=ASIA`;
+        let html1 = await fetchContent(url1);
         if (!html1.includes('404 Not Found.')) {
             let data1 = parsePowerRank(html1, url1);
             let retry = 0;
             while (!data1 && retry < 3) {
                 retry++;
                 logWithTime(`${url1} のパース再試行中 (${retry}/3)...`);
-                await page.waitForTimeout(1500);
+                await new Promise(r => setTimeout(r, 1500));
                 html1 = await page.content();
                 data1 = parsePowerRank(html1, url1);
             }
@@ -229,8 +222,8 @@ async function processEpicId(epicId, id, retryCount = 3, startTime = Date.now())
         logWithTime(`${url1}に404エラーが発生しました`);
 
         // 2. 検索ページでID修正
-        const url2 = `https://fortnitetracker.com/profile/search?q=${id}`;
-        const html2 = await fetchContent(url2, false);
+        const url2 = `https://fortnitetracker.com/profile/search?q=${encodeURIComponent(id)}`;
+        let html2 = await fetchContent(url2, false);
         logWithTime(`${url2}にアクセスしました`);
         if (html2.includes('404 Not Found.')) {
             logWithTime(`${url2}に404エラーが発生しました\n処理を終了します`);
@@ -241,8 +234,8 @@ async function processEpicId(epicId, id, retryCount = 3, startTime = Date.now())
         logWithTime(`${url2}のIDを取得しました: ${fixedEpicId}`);
 
         // 3. 修正IDで再取得
-        const url3 = `https://fortnitetracker.com/profile/kbm/${fixedEpicId}/events?competitive=pr&region=ASIA`;
-        const html3 = await fetchContent(url3);
+        const url3 = `https://fortnitetracker.com/profile/kbm/${encodeURIComponent(fixedEpicId)}/events?competitive=pr&region=ASIA`;
+        let html3 = await fetchContent(url3);
         if (!html3.includes('404 Not Found.')) {
             let data3 = parsePowerRank(html3, url3);
 
@@ -250,7 +243,7 @@ async function processEpicId(epicId, id, retryCount = 3, startTime = Date.now())
             while (!data3 && retry < 3) {
                 retry++;
                 logWithTime(`${url3} のパース再試行中 (${retry}/3)...`);
-                await page.waitForTimeout(1500);
+                await new Promise(r => setTimeout(r, 1500));
                 html3 = await page.content();
                 data3 = parsePowerRank(html3, url3);
             }
