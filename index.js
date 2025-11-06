@@ -113,21 +113,27 @@ async function setupBrowser() {
 // タスクキュー制御
 const taskQueue = [];
 let activeTasks = 0;
+let isProcessing = false;
 
 async function processQueue() {
-    if (taskQueue.length === 0 || activeTasks >= pagePool.poolSize) return;
+    if (isProcessing) return;
+    isProcessing = true;
 
-    const task = taskQueue.shift();
-    activeTasks++;
+    while (taskQueue.length > 0 && activeTasks < pagePool.poolSize) {
+        const task = taskQueue.shift();
+        activeTasks++;
 
-    try {
-        await task();
-    } catch (e) {
-        console.error(e);
-    } finally {
-        activeTasks--;
-        processQueue();
+        try {
+            await task();
+        } catch (e) {
+            console.error(e);
+        } finally {
+            activeTasks--;
+        }
     }
+
+    isProcessing = false;
+    if (taskQueue.length > 0) processQueue();
 }
 
 app.get('/api/profile/:epicId', async (req, res) => {
