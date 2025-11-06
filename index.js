@@ -157,7 +157,7 @@ app.get('/api/profile/:epicId', async (req, res) => {
     processQueue();
 });
 
-async function processEpicId(epicId, id, retryCount = 3, startTime = Date.now()) {
+async function processEpicId(epicId, id, retryCount = 5, startTime = Date.now()) {
     const page = await pagePool.getPage();
     try {
         // 共通のfetch関数
@@ -216,9 +216,9 @@ async function processEpicId(epicId, id, retryCount = 3, startTime = Date.now())
         if (!html1.includes('404 Not Found.')) {
             let data1 = parsePowerRank(html1, url1);
             let retry = 0;
-            while (!data1 && retry < 3) {
+            while (!data1 && retry < 5) {
                 retry++;
-                logWithTime(`${url1} のパース再試行中 (${retry}/3)...`);
+                logWithTime(`${url1} のパース再試行中 (${retry}/5)...`);
                 await new Promise(r => setTimeout(r, 1500));
                 html1 = await page.content();
                 data1 = parsePowerRank(html1, url1);
@@ -236,7 +236,14 @@ async function processEpicId(epicId, id, retryCount = 3, startTime = Date.now())
             return null;
         }
         logWithTime(`${url2}のデータを取得しました`);
-        const fixedEpicId = await page.$eval('.profile-header-user__nickname', el => el.textContent.trim());
+        let fixedEpicId = null;
+        try {
+            fixedEpicId = await page.$eval('.profile-header-user__nickname', el => el.textContent.trim());
+            logWithTime(`${url2}のIDを取得しました: ${fixedEpicId}`);
+        } catch (e) {
+            logWithTime(`${url2}でEpic IDを取得できませんでした（要素未検出）`);
+            return null;
+        }
         logWithTime(`${url2}のIDを取得しました: ${fixedEpicId}`);
 
         // 3. 修正IDで再取得
@@ -246,9 +253,9 @@ async function processEpicId(epicId, id, retryCount = 3, startTime = Date.now())
             let data3 = parsePowerRank(html3, url3);
 
             let retry = 0;
-            while (!data3 && retry < 3) {
+            while (!data3 && retry < 5) {
                 retry++;
-                logWithTime(`${url3} のパース再試行中 (${retry}/3)...`);
+                logWithTime(`${url3} のパース再試行中 (${retry}/5)...`);
                 await new Promise(r => setTimeout(r, 1500));
                 html3 = await page.content();
                 data3 = parsePowerRank(html3, url3);
